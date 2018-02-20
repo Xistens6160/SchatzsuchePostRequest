@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="9485c37a-b4d5-44db-9b6b-0687b47a0b66" name="SchatzsuchePost" url="http://192.168.58.193">
+        <fileTransfer host="192.168.58.193" port="22" rootFolder="/var/www/schatzsuchepostrequest" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
