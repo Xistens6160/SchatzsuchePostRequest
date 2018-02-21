@@ -12,5 +12,5 @@ $map =[
       9 =>["id" =>  9, "name" => "Sackgasse", "beschreibung" => "Du kommst hier nicht weiter"]];
 
 
-$player = 0;
+
 
