@@ -1,13 +1,14 @@
 <?php
-$ort = [["name" => "Markplatz", "Beschreibung" => "Der Markplatz ist reichlich Besucht von Händlern aus der ganzen Welt...."],
+$ort = [["name" => "Eigenes Haus", "Beschreibung" => "Aus deinem Haus kommt ein leckerer Geruch, wie es aussieht kocht deine Mutter gerade"],
+    ["name" => "Markplatz", "Beschreibung" => "Der Markplatz ist reichlich Besucht von Händlern aus der ganzen Welt...."],
     ["name" => "Schmiede", "Beschreibung" => "Du siehst wie der Schmied das neue Schwert schleift"],
     ["name" => "Kirche", "Beschreibung" => "Du siehst ein Prister der vor einer kleinen Menschengruppe eine Predigt hält"],
     ["name" => "Rathaus", "Beschreibung" => "Vor dem Rathaus ist ein kleiner Stand aufgebaut wo die Bürger ihre Steuern zahlen müssen"],
     ["name" => "Wirtshaus", "Beschreibung" => "Schon von draußen hörst du das gebrülle und gelache der Besoffenen Gäste"],
     ["name" => "Burgtor", "Beschreibung" => "Das Burgtor ist stark von Wachen bewacht, du hast keine Chance da durch zu kommen"],
-    ["name" => "Eigenes Haus", "Beschreibung" => "Aus deinem Haus kommt ein leckerer Geruch, wie es aussieht kocht deine Mutter gerade"],
+    ["name" => "Seitengasse", "Beschreibung" => "In der Gasse stinkt es nach Fäkalien und du siehst ein paar Kerle beim Würfel spielen"],
     ["name" => "Schatz gefunden", "Beschreibung" => "Du hast Gewonnen"],
-    ["name" => "Seitengasse", "Beschreibung" => "In der Gasse stinkt es nach Fäkalien und du siehst ein paar Kerle beim Würfel spielen"]];
+    ["name" => "Sackgasse", "Beschreibung" => "Du kommst hier nicht durch"]];
 
 
 $tipp  = [["tipp" => "Geh nach Norden"],
