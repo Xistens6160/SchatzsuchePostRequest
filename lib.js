@@ -4,5 +4,7 @@ function callAction(action) {
         var data = JSON.parse(response);
         document.getElementById('output').innerHTML= data.art + data.output;
         document.getElementById('description').innerHTML= data.art2 + data.beschreibung;
+        document.getElementById('step').innerHTML= data.art3 + data.steps;
+        document.getElementById('time').innerHTML= data.art4 + data.time;
         document.getElementById('button').innerHTML= data.body;
     })}

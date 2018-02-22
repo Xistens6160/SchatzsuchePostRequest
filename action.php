@@ -1,67 +1,108 @@
 <?php
 $response =[];
-$output = array();
+$output = [];
+
+//orte.php einbinden
+
 include 'orte.php';
+
+//map.php einbinden
+
 include 'map.php';
+
 //aktuellen Actionwert von der JS Function holen
+
 $action = $_POST['action'];
+
+//aktuelle Schritte holen
+
+$steps = file_get_contents('currentstep.txt');
+
 //aktuelle Position holen
+
 $position = file_get_contents('position.txt');
 
-//Generiert Button mit gewünschten Werten
+//generiert Button mit gewünschten Werten
+
 function getButtonHtml($var, $action) {
     return "<button onclick='callAction($action)'>".$var."</button>";
 }
 
-//Generiert Button der auf deie Startseite leitet
+//generiert Button der auf deie Startseite leitet
+
 function getbackButton(){
     return "<button onclick=\"location.href = 'start.html';\">Zurück zur Startseite</button>";
 }
 
 
-//Gibt den Starttext aus und setzt Position auf 0 zurück
+//gibt den Starttext aus und setzt Position und den Schrittzähler auf 0 zurück
+
 if ($action == 0)
 {
+    file_get_contents('currenttime', time());
+    $steps = 0;
     $position = 0;
     $zufall = array_rand($starttext,1);
-    $temp = $starttext[$zufall];
-    $response = ["art" => "", "output" => $temp["start"],"art2" =>"", "beschreibung" => ""];
-}
-//Gibt ein Tipp entsprechend der Position aus
-if ($action == 6){
-    $temp2 = $map[$position];
-    $response = ["art" => "Tipp: ", "output" => $temp2["tipp"],"art2" => "", "beschreibung" => ""];
-}
-//Gibt den Letzten Ort wo man war aus
-if ($action == 5){
-    $position = file_get_contents("lastposition.txt");
-    $temp2 = $map[$position];
-    $response = ["art" => "Ort: ", "output" => $temp2["name"], "art2" => "Beschreibung: ", "beschreibung" => $temp2["beschreibung"]];
+    $tempoutput = $starttext[$zufall];
+    $response = ["art" => "", "output" => $tempoutput["start"],"art2" =>"", "beschreibung" => "","art3" => "",  "steps" => "",  "art4" => "", "time" => ""];
 }
 
-//Ändert die Position und gibt neue Position aus
-if ($action == 1 ||$action == 2 || $action == 3 || $action == 4) {
-    file_put_contents('lastposition.txt', $position);
-    $temp = $map[$position];
-    if ($action == 1) {
-        $position = $temp["norden"];
-    }
-    if ($action == 2) {
-        $position = $temp["osten"];
-    }
-    if ($action == 3) {
-        $position = $temp["süden"];
-    }
-    if ($action == 4) {
-        $position = $temp["westen"];
-    }
-    $temp2 = $map[$position];
-    $response = ["art" => "Ort: ", "output" => $temp2["name"], "art2" => "Beschreibung: ", "beschreibung" => $temp2["beschreibung"]];
-    $postionrequest = $temp2;
+//erhöht den Schrittzähler um eins, wenn ein Zug gemacht wird
+
+if($action == 1 || $action == 2 || $action == 3 || $action == 4 || $action == 5 || $action == 6)
+{
+    $steps = $steps + 1;
 }
+
+
+//gibt ein Tipp entsprechend der Position aus
+
+if ($action == 6)
+{
+    $templocation = $map[$position];
+    $response = ["art" => "Tipp: ", "output" => $templocation["tipp"],"art2" => "", "beschreibung" => "","art3" => "Schritte: ",  "steps" => $steps,  "art4" => "", "time" => ""];
+}
+//gibt den Letzten Ort wo man war aus
+
+if ($action == 5)
+{
+    $position = file_get_contents("lastposition.txt");
+    $templocation = $map[$position];
+    $response = ["art" => "Ort: ", "output" => $templocation["name"], "art2" => "Beschreibung: ", "beschreibung" => $templocation["beschreibung"], "art3" => "Schritte: ",  "steps" => $steps,  "art4" => "", "time" => ""];
+}
+
+//ändert die Position und gibt neue Position aus
+
+if ($action == 1 ||$action == 2 || $action == 3 || $action == 4)
+{
+    file_put_contents('lastposition.txt', $position);
+    $templocation = $map[$position];
+    if ($action == 1)
+    {
+        $position = $templocation["norden"];
+    }
+    if ($action == 2)
+    {
+        $position = $templocation["osten"];
+    }
+    if ($action == 3)
+    {
+        $position = $templocation["süden"];
+    }
+    if ($action == 4)
+    {
+        $position = $templocation["westen"];
+    }
+    $templocation = $map[$position];
+    $response = ["art" => "Ort: ", "output" => $templocation["name"], "art2" => "Beschreibung: ", "beschreibung" => $templocation["beschreibung"], "art3" => "Schritte: ",  "steps" => $steps, "art4" => "", "time" => ""];
+    $postionrequest = $templocation;
+}
+
 
 //gibt die Button der Züge die man machen kann aus
-if ($postionrequest["id"] != 8){
+
+if ($postionrequest["id"] != 8)
+{
     $response['body'] = getButtonHtml('Norden',1)
         . getButtonHtml('Osten', 2)
         . getButtonHtml('Süden', 3)
@@ -69,18 +110,31 @@ if ($postionrequest["id"] != 8){
         . getButtonHtml('Tipp', 6);
 }
 //gibt den "Zurück zum Startbildschirm" Button aus
+
 if($postionrequest["id"] == 8)
 {
+    $beginntime = file_get_contents('currenttime.txt');
+    $time =  time() - $beginntime;
     $position = 0;
+    $response = ["art" => "Ort: ", "output" => $templocation["name"], "art2" => "Beschreibung: ", "beschreibung" => $templocation["beschreibung"], "art3" => "Schritte: ",  "steps" => $steps, "art4" => "Zeit: ","time" => $time];
     $response['body'] = getbackButton();
 }
-//Gibt den "Zurück" Button aus
+//gibt den "Zurück" Button aus
+
 if ($postionrequest["id"] == 9)
 {
     $response['body'] = getButtonHtml('Zurück', 5,$position);
 }
-//Schreibt die neue Position in eine andere Datei
+
+//schreibt die neue Schrittzahl in eine andere Datei
+
+file_put_contents('currentstep.txt', $steps);
+
+//schreibt die neue Position in eine andere Datei
+
  file_put_contents('position.txt', $position);
+
 //verpackt alles in JSON
+
 $json = json_encode($response);
 echo $json;
