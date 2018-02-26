@@ -25,7 +25,7 @@
     foreach ($tempdata as $row)
     {
         $row = (array) $row;
-        $steps = $row["step"];
+        $steps = $row["steps"];
         $time = $row["time"];
         $tabledata .= calllist($steps, $time);
     }

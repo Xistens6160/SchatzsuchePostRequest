@@ -107,7 +107,11 @@ if ($postionrequest["id"] == 8)
     $position = 0;
     $response = ["art" => "Ort: ", "output" => $templocation["name"], "art2" => "Beschreibung: ", "beschreibung" => $templocation["beschreibung"], "art3" => "Schritte: ",  "steps" => $steps, "art4" => "Zeit in Sekunden: ","time" => $time];
     $response['body'] = getbackButton();
-    $score = ["step" => $steps, "time" => $time];
+
+    // speichert neuen Score in die Liste
+    $score = file_get_contents('highscore.txt');
+    $score = json_decode($score);
+    $score[] = ["steps" => $steps, "time" => $time];
     $score = json_encode($score);
     file_put_contents('highscore.txt', $score);
 }
