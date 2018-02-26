@@ -13,6 +13,6 @@ function callScore() {
     $.post('highscore.php' , function (response) {
         console.log(response);
         var data = JSON.parse(response);
-        document.getElementById('steps').innerHTML= data.steps;
-        document.getElementById('time').innerHTML= data.times;
+        console.log(data.body);
+        document.getElementById('tableoutput').innerHTML= data.body;
     })}

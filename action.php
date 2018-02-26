@@ -109,10 +109,10 @@ if ($postionrequest["id"] == 8)
     $response['body'] = getbackButton();
     $score = ["step" => $steps, "time" => $time];
     $score = json_encode($score);
-    file_put_contents('highscore.txt', $score, FILE_APPEND);
+    file_put_contents('highscore.txt', $score);
 }
-// gibt den "Zurück" Button aus
 
+// gibt den "Zurück" Button aus
 if ($postionrequest["id"] == 9)
 {
     $response['body'] = getButtonHtml('Zurück', 5,$position);
