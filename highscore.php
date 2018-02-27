@@ -16,11 +16,16 @@
         return $html;
     }
 
+    // holt sich die Scores aus der Text Datei
     $response = [];
     $json = file_get_contents('highscore.txt');
     $tempdata = json_decode($json);
+
+    // sortiert die Liste nach den Schritten aufsteigend
     asort($tempdata);
     $tabledata = '';
+
+    // triggert für jeden Eintrag die Function um die Daten in die Tabelle zu Speichern
     foreach ($tempdata as $row)
     {
         $row = (array) $row;
