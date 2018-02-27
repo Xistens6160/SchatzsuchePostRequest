@@ -16,7 +16,6 @@
         return $html;
     }
 
-    $counter = 0;
     $response = [];
     $json = file_get_contents('highscore.txt');
     $tempdata = json_decode($json);
