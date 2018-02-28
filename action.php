@@ -12,10 +12,10 @@ include 'map.php';
 $action = $_POST['action'];
 
 // aktuelle Schritte holen
-$steps = file_get_contents('currentstep.txt');
+$steps = file_get_contents('Notes/currentstep.txt');
 
 // aktuelle Position holen
-$position = file_get_contents('position.txt');
+$position = file_get_contents('Notes/position.txt');
 
 // generiert Button mit gewünschten Werten
 function getButtonHtml($var, $action) {
@@ -31,7 +31,7 @@ function getbackButton(){
 // gibt den Starttext aus und setzt Position und den Schrittzähler auf 0 zurück
 if ($action == 0)
 {
-    file_put_contents('currenttime.txt',time());
+    file_put_contents('Notes/currenttime.txt',time());
     $steps = 0;
     $position = 0;
     $zufall = array_rand($starttext,1);
@@ -56,7 +56,7 @@ if ($action == 6)
 // gibt den letzten Ort wo man war aus
 if ($action == 5)
 {
-    $position = file_get_contents("lastposition.txt");
+    $position = file_get_contents("Notes/lastposition.txt");
     $templocation = $map[$position];
     $response = ["art" => "Ort: ", "output" => $templocation["name"], "art2" => "Beschreibung: ", "beschreibung" => $templocation["beschreibung"], "art3" => "Schritte: ",  "steps" => $steps,  "art4" => "", "time" => ""];
 }
@@ -64,7 +64,7 @@ if ($action == 5)
 // ändert die Position und gibt neue Position aus
 if ($action >= 1 && $action <= 4)
 {
-    file_put_contents('lastposition.txt', $position);
+    file_put_contents('Notes/lastposition.txt', $position);
     $templocation = $map[$position];
     if ($action == 1)
     {
@@ -102,18 +102,18 @@ if ($postionrequest["id"] != 8)
 // gibt den "Zurück zum Startbildschirm" Button und Sieges Text aus
 if ($postionrequest["id"] == 8)
 {
-    $beginntime = file_get_contents('currenttime.txt') + 0;
+    $beginntime = file_get_contents('Notes/currenttime.txt') + 0;
     $time =  time() - $beginntime;
     $position = 0;
     $response = ["art" => "Ort: ", "output" => $templocation["name"], "art2" => "Beschreibung: ", "beschreibung" => $templocation["beschreibung"], "art3" => "Schritte: ",  "steps" => $steps, "art4" => "Zeit in Sekunden: ","time" => $time];
     $response['body'] = getbackButton();
 
     // speichert neuen Score in die Liste
-    $score = file_get_contents('highscore.txt');
+    $score = file_get_contents('highscore.json');
     $score = json_decode($score);
     $score[] = ["steps" => $steps, "time" => $time];
     $score = json_encode($score);
-    file_put_contents('highscore.txt', $score);
+    file_put_contents('highscore.json', $score);
 }
 
 // gibt den "Zurück" Button aus
@@ -123,10 +123,10 @@ if ($postionrequest["id"] == 9)
 }
 
 // schreibt die neue Schrittzahl in eine andere Datei
-file_put_contents('currentstep.txt', $steps);
+file_put_contents('Notes/currentstep.txt', $steps);
 
 // schreibt die neue Position in eine andere Datei
- file_put_contents('position.txt', $position);
+ file_put_contents('Notes/position.txt', $position);
 
 // verpackt alles in JSON
 $json = json_encode($response);
