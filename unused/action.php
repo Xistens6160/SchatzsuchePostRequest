@@ -24,7 +24,7 @@ function getButtonHtml($var, $action) {
 
 // generiert Button der auf deie Startseite leitet
 function getbackButton(){
-    return "<button onclick=\"location.href = 'start.html';\">Zurück zur Startseite</button>";
+    return ">Zurück zur Startseite</button>";
 }
 
 

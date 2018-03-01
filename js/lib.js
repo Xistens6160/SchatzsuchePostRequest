@@ -1,5 +1,5 @@
 function callAction(action) {
-    $.post('newAction.php', {"action": action}, function (response) {
+    $.post('../php/newAction.php', {"action": action}, function (response) {
         console.log(response);
         var data = JSON.parse(response);
         document.getElementById('output').innerHTML = data.art + data.output;
@@ -11,17 +11,10 @@ function callAction(action) {
 }
 
 function callScore() {
-    $.post('highscore.php', function (response) {
+    $.post('../php/highscore.php', function (response) {
         console.log(response);
         var data = JSON.parse(response);
         console.log(data.body);
         document.getElementById('tableoutput').innerHTML = data.body;
-    })
-}
-
-function callGenerator(maxX, maxY) {
-    $.post('generatemap.php', {"maxX":maxX, "maxY":maxY}, function ()
-     {
-        console.log(maxX,  1);
     })
 }

@@ -1,32 +1,43 @@
 <?php
+
 $response = [];
 $output = [];
-$data = json_decode(file_get_contents("map.json"));
+$data = json_decode(file_get_contents("../json/map.json"));
 $data = (array)$data;
 $map = (array)$data["field"];
 $coordsstart = (array)$data["start"];
 $coordsgoal = (array)$data["goal"];
 $position = [];
 
-// generiert Button
+/**
+ * @param $var
+ * @param $action
+ * @return string
+ * generiert Button
+ */
 function getButtonHtml($var, $action)
 {
     return "<button onclick='callAction($action)'>" . $var . "</button>";
 }
 
-// generiert den "Zurück zur Startseite" Button
+/**
+ * @return string
+ * generiert den "Zurück zur Startseite" Button
+ */
 function getbackButton()
 {
-    return "<button onclick=\"location.href = 'start.html';\">Zurück zur Startseite</button>";
+    return ">Zurück zur Startseite</button>";
 }
 
-// startet ein neues Spiel beim Triggern
+/**
+ * startet ein neues Spiel beim Triggern
+ */
 function startNewGame()
 {
     global $steps, $response, $position, $x, $y, $coordsstart,$map;
     $x = $coordsstart["x"];
     $y = $coordsstart["y"];
-    file_put_contents('Notes/currenttime.txt', time());
+    file_put_contents('../Notes/currenttime.txt', time());
     $steps = 0;
 
     $roomArray = (array)$map[$x][$y];
@@ -34,15 +45,21 @@ function startNewGame()
     $position = $map[$x][$y];
 }
 
+/**
+ *  gibt die Position vor der Sackgasse aus
+ */
 function callLastPosition()
 {
     global $map, $steps, $x, $y, $response;
-    $x = file_get_contents("Notes/lastx.txt");
-    $y = file_get_contents("Notes/lasty.txt");
+    $x = file_get_contents("../Notes/lastx.txt");
+    $y = file_get_contents("../Notes/lasty.txt");
     $roomArray = (array)$map[$x][$y];
     $response = ["art" => "Position: ", "output" => $roomArray["name"], "art2" => "Schritte: ", "steps" => $steps, "art3" => "", "time" => ""];
 }
 
+/**
+ * gibt ein Tipp entsprechend der Position aus
+ */
 function callTipp()
 {
     global $coordsgoal, $y, $x, $steps, $response;
@@ -65,6 +82,10 @@ function callTipp()
     $response = ["art" => "Tipp: ", "output" => "Gehe nach $answer", "art2" => "Schritte: ", "steps" => $steps, "art3" => "", "time" => ""];
 }
 
+/**
+ * @param $action
+ * gibt den nächsten Raum je nach Zug aus
+ */
 function callNextRoom($action)
 {
     global $map, $y, $x, $steps, $response;
@@ -92,33 +113,39 @@ function callNextRoom($action)
     }
 }
 
+/**
+ * gibt die Knöpfe zum bewegen aus
+ */
 function callDirectionButton()
 {
     global $response;
     $response['body'] = getButtonHtml('Norden', 1) . getButtonHtml('Osten', 2) . getButtonHtml('Süden', 3) . getButtonHtml('Westen', 4) . getButtonHtml('Tipp', 6) . getButtonHtml('Reset', 0);
 }
 
+/**
+ * gibt die Sieges Oberfläche aus und speichert den Score
+ */
 function callVictoryScreen()
 {
     global $map, $x, $y, $steps, $response;
-    $beginntime = file_get_contents('Notes/currenttime.txt') + 0;
+    $beginntime = file_get_contents('../Notes/currenttime.txt') + 0;
     $time = time() - $beginntime;
     $position = 0;
     $roomArray = (array)$map[$x][$y];
     $response = ["art" => "Position: ", "output" => $roomArray["name"], "art2" => "Schritte: ", "steps" => $steps, "art3" => "Zeit in Sekunden: ", "time" => $time];
     $response['body'] = getbackButton();
 
-    $score = file_get_contents('highscore.json');
+    $score = file_get_contents('../json/highscore.json');
     $score = json_decode($score);
     $score[] = ["steps" => $steps, "time" => $time];
     $score = json_encode($score);
-    file_put_contents('highscore.json', $score);
+    file_put_contents('../json/highscore.json', $score);
 }
 
-// hohlt sich die Daten
-$x = file_get_contents("Notes/safex.txt");
-$y = file_get_contents("Notes/safey.txt");
-$steps = file_get_contents("Notes/currentstep.txt");
+// holt sich die Daten
+$x = file_get_contents("../Notes/safex.txt");
+$y = file_get_contents("../Notes/safey.txt");
+$steps = file_get_contents("../Notes/currentstep.txt");
 
 $action = $_POST['action'];
 
@@ -127,30 +154,32 @@ if ($action >= 1 && $action <= 6) {
     $steps += 1;
 }
 
-// triggert startNewGame
+// triggert beim laden der Seite und beim resetten des Spiels startNewGame
 if ($action == 0) {
     startNewGame($map);
 }
 
-// gibt nach einer Sackgasse die letzte Position aus und setzt x und y dem entsprechend
+// triggert nach einer Sackgasse callLastPosition
 if ($action == 5) {
     callLastPosition();
 }
 
+// triggert bei Anfrage callTipp
 if ($action == 6) {
     callTipp();
 }
 
-// ändert die Koordinaten je nach Richtung
+// triggert callNextRoom mit der entsprechenden Raum in der Himmelsrichtung
 if ($action >= 1 && $action <= 4) {
     callNextRoom($action);
 }
 
-// solange man nicht Gewonnen hat gibt er die Button der Züge aus
+// solange man nicht Gewonnen hat triggert callDirectionButton
 if ($response["output"] != "Ziel") {
     callDirectionButton();
 }
 
+// triggert wenn man Gewonnen hat callVictoryScreen
 if ($response["output"] == "Ziel") {
     callVictoryScreen();
 }
@@ -161,9 +190,9 @@ if ($response["output"] == "Sackgasse") {
 }
 
 // speichert Daten
-file_put_contents("Notes/safex.txt", $x);
-file_put_contents("Notes/safey.txt", $y);
-file_put_contents("Notes/currentstep.txt", $steps);
+file_put_contents("../Notes/safex.txt", $x);
+file_put_contents("../Notes/safey.txt", $y);
+file_put_contents("../Notes/currentstep.txt", $steps);
 
 $json = json_encode($response);
 echo $json;

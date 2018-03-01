@@ -1,10 +1,14 @@
 <?php
-$maxX = $_GET['maxX'];
-$maxY = $_GET['maxY'];
+
+$maxX = $_GET['maxx'] - 1;
+$maxY = $_GET['maxy'] - 1;
 $x = 0;
 $y = 0;
 $counter = 0;
 
+/**
+ * setz ein zufälligen Zielpunkt
+ */
 function newGoal()
 {
     global $map, $maxY, $maxX;
@@ -13,13 +17,16 @@ function newGoal()
     if ($map["field"][$randomx][$randomy] != ["name" => "Start"]) {
         $map["field"][$randomx][$randomy] = ["name" => "Ziel"];
         $map["goal"] = ["x" => $randomx, "y" => $randomy];
-    }
-    else
-    {
+    } else {
         newGoal();
     }
 }
 
+/**
+ * weißt jedem Raum in der X-Achse ein Wert zu
+ * @param $x
+ * @param $y
+ */
 function nextRoom($x, $y)
 {
     global $maxY, $map, $counter, $x;
@@ -31,6 +38,9 @@ function nextRoom($x, $y)
     changex();
 }
 
+/**
+ * geht wenn die X-AChse voll ist ein hoch
+ */
 function changex()
 {
     global $x, $y, $maxX;
@@ -52,8 +62,7 @@ $map["start"] = ["x" => $randomx, "y" => $randomy];
 newGoal();
 
 
-
 $json = json_encode($map);
-file_put_contents('map.json', $json);
+file_put_contents('../json/map.json', $json);
 
-header("location: start.html");
+header("location: ../html/start.html");

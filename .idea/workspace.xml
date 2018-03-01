@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89d280b8-b658-4995-9f77-1df7b94bf14e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/generatemap.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generatemap.html" afterPath="$PROJECT_DIR$/generatemap.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generatemap.php" afterPath="$PROJECT_DIR$/generatemap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/highscore.php" afterPath="$PROJECT_DIR$/highscore.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib.js" afterPath="$PROJECT_DIR$/lib.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/newAction.php" afterPath="$PROJECT_DIR$/newAction.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/start.html" afterPath="$PROJECT_DIR$/start.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test.php" afterPath="$PROJECT_DIR$/test.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,7 +33,7 @@
         <state>
           <leaf>
             <file leaf-file-name="action.php" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/action.php">
+              <entry file="file://$PROJECT_DIR$/unused/action.php">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="1751">
                     <caret line="124" column="53" lean-forward="true" selection-start-line="124" selection-start-column="53" selection-end-line="124" selection-end-column="53" />
@@ -66,52 +62,86 @@
         </entry>
       </file>
       <file leaf-file-name="lib.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib.js">
+        <entry file="file://$PROJECT_DIR$/js/lib.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+            <state relative-caret-position="221">
+              <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="generatemap.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/generatemap.html">
+        <entry file="file://$PROJECT_DIR$/html/generatemap.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="highscore.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/html/highscore.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+              <caret line="16" column="98" lean-forward="false" selection-start-line="16" selection-start-column="98" selection-end-line="16" selection-end-column="98" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="highscore.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/highscore.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="35" lean-forward="false" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
+              <folding>
+                <marker date="1519900207783" expanded="false" signature="178:239" ph="..." />
+                <marker date="1519900207783" expanded="true" signature="240:344" ph="..." />
+                <marker date="1519900207783" expanded="true" signature="261:344" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="generatemap.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/php/generatemap.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="782">
+              <caret line="67" column="26" lean-forward="false" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="newAction.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/newAction.php">
+        <entry file="file://$PROJECT_DIR$/php/newAction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
+            <state relative-caret-position="3298">
+              <caret line="194" column="22" lean-forward="false" selection-start-line="194" selection-start-column="22" selection-end-line="194" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="generatemap.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/generatemap.php">
+      <file leaf-file-name="start.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/html/start.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="start.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/start.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="54" lean-forward="false" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+            <state relative-caret-position="272">
+              <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
               <folding>
-                <marker date="1519894275095" expanded="true" signature="694:699" ph="..." />
+                <marker date="1519900586030" expanded="true" signature="656:661" ph="..." />
               </folding>
             </state>
           </provider>
@@ -163,11 +193,16 @@
         <option value="$PROJECT_DIR$/test.php" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/style.css" />
-        <option value="$PROJECT_DIR$/lib.js" />
         <option value="$PROJECT_DIR$/generatemap.html" />
-        <option value="$PROJECT_DIR$/start.html" />
-        <option value="$PROJECT_DIR$/newAction.php" />
+        <option value="$PROJECT_DIR$/lib.js" />
         <option value="$PROJECT_DIR$/generatemap.php" />
+        <option value="$PROJECT_DIR$/newAction.php" />
+        <option value="$PROJECT_DIR$/start.html" />
+        <option value="$PROJECT_DIR$/php/generatemap.php" />
+        <option value="$PROJECT_DIR$/js/lib.js" />
+        <option value="$PROJECT_DIR$/php/highscore.php" />
+        <option value="$PROJECT_DIR$/php/newAction.php" />
+        <option value="$PROJECT_DIR$/html/start.html" />
       </list>
     </option>
   </component>
@@ -220,7 +255,27 @@
             <path>
               <item name="SchatzsuchePostRequest" type="b2602c69:ProjectViewProjectNode" />
               <item name="SchatzsuchePostRequest" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Notes" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="html" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SchatzsuchePostRequest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchatzsuchePostRequest" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SchatzsuchePostRequest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchatzsuchePostRequest" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="json" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SchatzsuchePostRequest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchatzsuchePostRequest" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="php" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SchatzsuchePostRequest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchatzsuchePostRequest" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="unused" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -243,9 +298,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\gue\PhpstormProjects\SchatzsuchePostRequest\json" />
       <recent name="C:\Users\gue\PhpstormProjects\SchatzsuchePostRequest" />
-      <recent name="C:\Users\gue\PhpstormProjects\SchatzsuchePostRequest\SafeData" />
-      <recent name="C:\Users\gue\PhpstormProjects\SchatzsuchePostRequest\Notes" />
+      <recent name="C:\Users\gue\PhpstormProjects\SchatzsuchePostRequest\html" />
+      <recent name="C:\Users\gue\PhpstormProjects\SchatzsuchePostRequest\php" />
+      <recent name="C:\Users\gue\PhpstormProjects\SchatzsuchePostRequest\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -272,12 +329,12 @@
       <updated>1519110924969</updated>
       <workItem from="1519110926293" duration="58812000" />
       <workItem from="1519401355764" duration="37000" />
-      <workItem from="1519628574929" duration="57506000" />
+      <workItem from="1519628574929" duration="62049000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="116411000" />
+    <option name="totallyTimeSpent" value="120954000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -299,7 +356,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917467" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917467" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16094421" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16094421" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1988555" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1788269" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -325,30 +382,20 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/start.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="65" lean-forward="false" selection-start-line="13" selection-start-column="65" selection-end-line="13" selection-end-column="65" />
-          <folding>
-            <marker date="1519894275095" expanded="true" signature="694:699" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/highscore.php">
+    <entry file="file://$PROJECT_DIR$/php/highscore.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
           <folding>
-            <marker date="1519815247389" expanded="false" signature="178:239" ph="..." />
-            <marker date="1519815247389" expanded="true" signature="240:344" ph="..." />
-            <marker date="1519815247389" expanded="true" signature="261:344" ph="..." />
+            <marker date="1519900207783" expanded="false" signature="178:239" ph="..." />
+            <marker date="1519900207783" expanded="true" signature="240:344" ph="..." />
+            <marker date="1519900207783" expanded="true" signature="261:344" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generatemap.php" />
-    <entry file="file://$PROJECT_DIR$/action.php">
+    <entry file="file://$PROJECT_DIR$/php/generatemap.php" />
+    <entry file="file://$PROJECT_DIR$/unused/action.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -365,7 +412,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/orte.php">
+    <entry file="file://$PROJECT_DIR$/unused/orte.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
@@ -403,7 +450,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="25" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="25" />
@@ -421,19 +468,19 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/generate map.php" />
-    <entry file="file://$PROJECT_DIR$/highscore.php">
+    <entry file="file://$PROJECT_DIR$/php/highscore.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
           <folding>
-            <marker date="1519815247389" expanded="false" signature="178:239" ph="..." />
-            <marker date="1519815247389" expanded="true" signature="240:344" ph="..." />
-            <marker date="1519815247389" expanded="true" signature="261:344" ph="..." />
+            <marker date="1519900207783" expanded="false" signature="178:239" ph="..." />
+            <marker date="1519900207783" expanded="true" signature="240:344" ph="..." />
+            <marker date="1519900207783" expanded="true" signature="261:344" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/action.php">
+    <entry file="file://$PROJECT_DIR$/unused/action.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="136" column="3" lean-forward="true" selection-start-line="136" selection-start-column="3" selection-end-line="137" selection-end-column="49" />
@@ -441,7 +488,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib.js">
+    <entry file="file://$PROJECT_DIR$/js/lib.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
@@ -449,7 +496,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/map.php">
+    <entry file="file://$PROJECT_DIR$/unused/map.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
@@ -457,7 +504,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/highscore.html">
+    <entry file="file://$PROJECT_DIR$/html/highscore.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="98" lean-forward="false" selection-start-line="16" selection-start-column="98" selection-end-line="16" selection-end-column="98" />
@@ -465,19 +512,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/start.html">
+    <entry file="file://$PROJECT_DIR$/html/start.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="65" lean-forward="false" selection-start-line="13" selection-start-column="65" selection-end-line="13" selection-end-column="65" />
           <folding>
-            <marker date="1519894275095" expanded="true" signature="694:699" ph="..." />
+            <marker date="1519900586030" expanded="true" signature="656:661" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/achtion.php" />
     <entry file="file://$PROJECT_DIR$/position.php" />
-    <entry file="file://$PROJECT_DIR$/orte.php">
+    <entry file="file://$PROJECT_DIR$/unused/orte.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
@@ -559,18 +606,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/highscore.json">
+    <entry file="file://$PROJECT_DIR$/json/highscore.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/highscore.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="98" lean-forward="false" selection-start-line="16" selection-start-column="98" selection-end-line="16" selection-end-column="98" />
           <folding />
         </state>
       </provider>
@@ -607,7 +646,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/map.php">
+    <entry file="file://$PROJECT_DIR$/unused/map.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
@@ -615,7 +654,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/map.json">
+    <entry file="file://$PROJECT_DIR$/json/map.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -623,7 +662,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/action.php">
+    <entry file="file://$PROJECT_DIR$/unused/action.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1751">
           <caret line="124" column="53" lean-forward="true" selection-start-line="124" selection-start-column="53" selection-end-line="124" selection-end-column="53" />
@@ -631,31 +670,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.php">
+    <entry file="file://$PROJECT_DIR$/unused/test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
           <caret line="86" column="33" lean-forward="false" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/highscore.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="1" lean-forward="false" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding>
-            <marker date="1519815247389" expanded="false" signature="178:239" ph="..." />
-            <marker date="1519815247389" expanded="true" signature="240:344" ph="..." />
-            <marker date="1519815247389" expanded="true" signature="261:344" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -669,45 +688,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib.js">
+    <entry file="uml://JavaScript-modules-diagram/C:/Users/gue/PhpstormProjects/SchatzsuchePostRequest/html/start.html">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/html/start.html</OriginalElement>
+          <nodes>
+            <node x="" y="">$PROJECT_DIR$/html/start.html</node>
+            <node x="" y="">$PROJECT_DIR$/style.css</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="75.0" y="48.5" />
+          <SelectedNodes />
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/lib.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        <state relative-caret-position="221">
+          <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generatemap.html">
+    <entry file="file://$PROJECT_DIR$/html/generatemap.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="25" lean-forward="false" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+        <state relative-caret-position="340">
+          <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/newAction.php">
+    <entry file="file://$PROJECT_DIR$/html/highscore.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="98" lean-forward="false" selection-start-line="16" selection-start-column="98" selection-end-line="16" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/highscore.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="23" column="22" lean-forward="false" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/start.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="54" lean-forward="false" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+          <caret line="23" column="35" lean-forward="false" selection-start-line="23" selection-start-column="35" selection-end-line="23" selection-end-column="35" />
           <folding>
-            <marker date="1519894275095" expanded="true" signature="694:699" ph="..." />
+            <marker date="1519900207783" expanded="false" signature="178:239" ph="..." />
+            <marker date="1519900207783" expanded="true" signature="240:344" ph="..." />
+            <marker date="1519900207783" expanded="true" signature="261:344" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/generatemap.php">
+    <entry file="file://$PROJECT_DIR$/php/newAction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+        <state relative-caret-position="3298">
+          <caret line="194" column="22" lean-forward="false" selection-start-line="194" selection-start-column="22" selection-end-line="194" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/generatemap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="67" column="26" lean-forward="false" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/html/start.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+          <folding>
+            <marker date="1519900586030" expanded="true" signature="656:661" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

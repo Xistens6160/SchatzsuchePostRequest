@@ -21,7 +21,7 @@ function getTableHtml($tabledata)
 
 // holt sich die Scores aus der Text Datei
 $response = [];
-$json = file_get_contents('highscore.json');
+$json = file_get_contents('../json/highscore.json');
 $tempdata = json_decode($json);
 
 // sortiert die Liste nach den Schritten aufsteigend
