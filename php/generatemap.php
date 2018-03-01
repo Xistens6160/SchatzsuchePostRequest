@@ -1,7 +1,9 @@
 <?php
 
-$maxX = $_GET['maxx'] - 1;
-$maxY = $_GET['maxy'] - 1;
+$maxX = $_GET['maxx'];
+$maxY = $_GET['maxy'];
+$maxX = $maxX -1;
+$maxY = $maxY -1;
 $x = 0;
 $y = 0;
 $counter = 0;

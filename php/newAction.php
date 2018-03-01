@@ -26,7 +26,7 @@ function getButtonHtml($var, $action)
  */
 function getbackButton()
 {
-    return ">Zurück zur Startseite</button>";
+    return "<button onclick=\"location.href = '../html/start.html';\">Zurück zur Startseite</button>";
 }
 
 /**
@@ -89,8 +89,8 @@ function callTipp()
 function callNextRoom($action)
 {
     global $map, $y, $x, $steps, $response;
-    file_put_contents('Notes/lastx.txt', $x);
-    file_put_contents('Notes/lasty.txt', $y);
+    file_put_contents('../Notes/lastx.txt', $x);
+    file_put_contents('../Notes/lasty.txt', $y);
     if ($action == 1) {
         $x += 1;
     }
