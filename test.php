@@ -5,23 +5,26 @@ $coordinates = [];
 $roomsCreated = 0;
 $maxDepth = 1;
 
-function saveRoomCoordinates($id, $coords) {
+function saveRoomCoordinates($id, $coords)
+{
     global $map, $coordinates;
     $map[$id]['x'] = $coords['x'];
     $map[$id]['y'] = $coords['y'];
     $coordinates[$coords['x']][$coords['y']] = $id;
 }
 
-function getNewRoom() {
+function getNewRoom()
+{
     global $roomsCreated;
     $roomsCreated += 1;
     $room = [];
-    $room['name'] = "Raum ".$roomsCreated;
+    $room['name'] = "Raum " . $roomsCreated;
     $room['id'] = $roomsCreated;
     return $room;
 }
 
-function changeCoordinatesByDirection($direction) {
+function changeCoordinatesByDirection($direction)
+{
     $changeCoordinates = ['x' => 0, 'y' => 0];
     if ($direction == 'n') $changeCoordinates['y'] += 1;
     if ($direction == 's') $changeCoordinates['y'] -= 1;
@@ -30,7 +33,8 @@ function changeCoordinatesByDirection($direction) {
     return $changeCoordinates;
 }
 
-function getOppositeDirection($direction) {
+function getOppositeDirection($direction)
+{
     if ($direction == 'n') return 's';
     if ($direction == 's') return 'n';
     if ($direction == 'e') return 'w';
@@ -42,7 +46,8 @@ function getOppositeDirection($direction) {
  * @param $id
  * @param int $count
  */
-function createNextRooms($id, $count = 0) {
+function createNextRooms($id, $count = 0)
+{
     global $map, $maxDepth, $coordinates;
     $directions = ['n', 'e', 's', 'w'];
     // Abbruch falls mehr als 5 Rekursionen
@@ -73,7 +78,8 @@ function createNextRooms($id, $count = 0) {
     }
 }
 
-function createMap() {
+function createMap()
+{
     global $map, $coordinates;
     $room = getNewRoom();
     $map[$room['id']] = $room;
