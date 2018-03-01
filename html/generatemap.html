@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-       <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
     <script
             src="http://code.jquery.com/jquery-3.3.1.js"
             integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -11,11 +11,14 @@
 </head>
 <body>
 <form action="../php/generatemap.php">
-<div id="dropdown"> X  = <input  type="number" min="2" max="101" value="2" name="maxx"></div>
+    <div id="dropdown"> X = <input type="number" min="2" max="101" value="2" name="maxx"></div>
 
-<div id="dropdown"> Y  = <input  type="number" min="2" max="101" value="2" name="maxy"></div>
-<input id="mainsitebutton" type="submit" value="Bestätigen">
-<br>
+    <div id="dropdown"> Y = <input type="number" min="2" max="101" value="2" name="maxy"></div>
+
+    <div id="dropdown"> Name = <input type="text" value="" name="name"></div>
+
+    <input id="mainsitebutton" type="submit" value="Bestätigen">
+    <br>
 </form>
 <br>
 <span id="button"></span>
