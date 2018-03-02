@@ -15,9 +15,9 @@ $position = [];
  * @return string
  * generiert Button
  */
-function getButtonHtml($var, $action)
+function getButtonHtml($class, $var, $action)
 {
-    return "<button onclick='callAction($action)'>" . $var . "</button>";
+    return "<button id='$class' onclick='callAction($action)'>" . $var . "</button>";
 }
 
 /**
@@ -26,7 +26,7 @@ function getButtonHtml($var, $action)
  */
 function getbackButton()
 {
-    return "<button onclick=\"location.href = '../html/start.html';\">Zurück zur Startseite</button>";
+    return "<button id='getbackbutton' onclick=\"location.href = '../html/start.html';\">Zurück zur Startseite</button>";
 }
 
 /**
@@ -109,7 +109,7 @@ function callNextRoom($action)
         $roomArray = (array)$map[$x][$y];
         $response = ["art" => "Position: ", "output" => $roomArray['name'], "art2" => "Schritte: ", "steps" => $steps, "art3" => "", "time" => ""];
     } else {
-        $response = ["art" => "Position: ", "output" => "Sackgasse", "art2" => "Schritte: ", "steps" => $steps, "art3" => "", "time" => ""];
+        $response = ["art" => "", "output" => "Sackgasse", "art2" => "Schritte: ", "steps" => $steps, "art3" => "", "time" => ""];
     }
 }
 
@@ -119,7 +119,7 @@ function callNextRoom($action)
 function callDirectionButton()
 {
     global $response;
-    $response['body'] = getButtonHtml('Norden', 1) . getButtonHtml('Osten', 2) . getButtonHtml('Süden', 3) . getButtonHtml('Westen', 4) . getButtonHtml('Tipp', 6) . getButtonHtml('Reset', 0);
+    $response['body'] = getButtonHtml("norden", 'Norden', 1) . getButtonHtml( "osten", 'Osten', 2) . getButtonHtml("süden" ,'Süden', 3) . getButtonHtml("westen",'Westen', 4) . getButtonHtml("tipp",'Tipp', 6) . getButtonHtml("reset",'Reset', 0);
 }
 
 /**
@@ -186,7 +186,7 @@ if ($response["output"] == "Ziel") {
 
 // wenn die Antwort "Sackgasse" ist gibt er den Zurück Button aus
 if ($response["output"] == "Sackgasse") {
-    $response['body'] = getButtonHtml('Zurück', 5, $position);
+    $response['body'] = getButtonHtml("sackgasse",'Zurück', 5, $position);
 }
 
 // speichert Daten

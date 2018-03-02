@@ -35,7 +35,7 @@ function nextRoom($x, $y)
     while ($y < $maxY) {
         $y += 1;
         $counter += 1;
-        $map["field"][$x][$y] = ["name" => "Raum" . $counter];
+        $map["field"][$x][$y] = ["name" => "Raum " . $counter];
     }
     changex();
 }

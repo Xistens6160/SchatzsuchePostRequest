@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-       <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
     <script
             src="http://code.jquery.com/jquery-3.3.1.js"
             integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -10,14 +10,24 @@
     <title>Schatzsuche</title>
 </head>
 <body>
-<form action="../php/generatemap.php">
-<div id="dropdown"> X  = <input  type="number" min="2" max="101" value="2" name="maxx"></div>
-
-<div id="dropdown"> Y  = <input  type="number" min="2" max="101" value="2" name="maxy"></div>
-<input id="mainsitebutton" type="submit" value="Bestätigen">
-<br>
-</form>
-<br>
-<span id="button"></span>
+<div class="wrapper">
+    <h1>Neue Map erstellen</h1>
+    <div class="text">
+      Hier kannst du eine neue Map generieren lassen. Du kannst die Höhe und Breite der Map Selbst entscheiden.
+        <br>
+        Achtung: Wenn du eine neue Map erstellst löscht du damit die aktuelle Map!!!!!!!!!!!!
+    </div>
+    <div id="dropdown">
+    <form action="../php/generatemap.php">
+        <div class="dropdown">   Höhe : <input type="number" min="2" max="100" value="2" name="maxx"></div>
+        <br>
+        <div class="dropdown"> Breite : <input type="number" min="2" max="100" value="2" name="maxy"></div>
+        <br>
+        <input class="buttons" type="submit" value="Bestätigen">
+        <br>
+    </form>
+    </div>
+    <br>
+</div>
 </body>
 </html>
