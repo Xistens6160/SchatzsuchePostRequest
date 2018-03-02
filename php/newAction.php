@@ -39,7 +39,7 @@ function startNewGame()
     $y = $coordsstart["y"];
     file_put_contents('../Notes/currenttime.txt', time());
     $steps = 0;
-
+//    var_dump((array)$map[1]);
     $roomArray = (array)$map[$x][$y];
     $response = ["art" => "Position: ", "output" => $roomArray["name"], "art2" => "", "steps" => "", "art3" => "", "time" => ""];
     $position = $map[$x][$y];

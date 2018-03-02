@@ -5,7 +5,7 @@ $maxY = $_GET['maxy'];
 $maxX = $maxX -1;
 $maxY = $maxY -1;
 $x = 0;
-$y = 0;
+$y = -1;
 $counter = 0;
 
 /**
