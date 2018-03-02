@@ -55,7 +55,7 @@ h1 {
 .button {
     margin-top: 15px;
     height: 50px;
-    width: 100px;
+    width: 120px;
 }
 
 .textingame {
@@ -130,4 +130,9 @@ h1 {
 #getbackbutton {
     width: 200px;
     height: 50px;
+}
+
+#mainsitebutton {
+    margin-left: 420px;
+    margin-top: 40px;
 }

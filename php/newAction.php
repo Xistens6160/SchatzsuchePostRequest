@@ -34,7 +34,7 @@ function getbackButton()
  */
 function startNewGame()
 {
-    global $steps, $response, $position, $x, $y, $coordsstart,$map;
+    global $steps, $response, $position, $x, $y, $coordsstart, $map;
     $x = $coordsstart["x"];
     $y = $coordsstart["y"];
     file_put_contents('../Notes/currenttime.txt', time());
@@ -119,7 +119,7 @@ function callNextRoom($action)
 function callDirectionButton()
 {
     global $response;
-    $response['body'] = getButtonHtml("norden", 'Norden', 1) . getButtonHtml( "osten", 'Osten', 2) . getButtonHtml("süden" ,'Süden', 3) . getButtonHtml("westen",'Westen', 4) . getButtonHtml("tipp",'Tipp', 6) . getButtonHtml("reset",'Reset', 0);
+    $response['body'] = getButtonHtml("norden", 'Norden', 1) . getButtonHtml("osten", 'Osten', 2) . getButtonHtml("süden", 'Süden', 3) . getButtonHtml("westen", 'Westen', 4) . getButtonHtml("tipp", 'Tipp', 6) . getButtonHtml("reset", 'Reset', 0);
 }
 
 /**
@@ -186,7 +186,7 @@ if ($response["output"] == "Ziel") {
 
 // wenn die Antwort "Sackgasse" ist gibt er den Zurück Button aus
 if ($response["output"] == "Sackgasse") {
-    $response['body'] = getButtonHtml("sackgasse",'Zurück', 5, $position);
+    $response['body'] = getButtonHtml("sackgasse", 'Zurück', 5, $position);
 }
 
 // speichert Daten
