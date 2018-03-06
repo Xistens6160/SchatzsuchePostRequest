@@ -1,5 +1,4 @@
 <?php
-
 $response = [];
 $output = [];
 $data = json_decode(file_get_contents("../json/map.json"));
@@ -8,6 +7,17 @@ $map = (array)$data["field"];
 $coordsstart = (array)$data["start"];
 $coordsgoal = (array)$data["goal"];
 $position = [];
+
+$servername = "192.168.58.193";
+$username = "schatzsuche@%";
+$password = "Passw0rd!";
+$dbname = "schatzsuche";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
 
 /**
  * @param $var
