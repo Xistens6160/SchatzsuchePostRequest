@@ -1,5 +1,5 @@
 <?php
-
+"test";
 $maxX = $_GET['maxx'];
 $maxY = $_GET['maxy'];
 $maxX = $maxX -1;

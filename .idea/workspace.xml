@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89d280b8-b658-4995-9f77-1df7b94bf14e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/php/newAction.php" afterPath="$PROJECT_DIR$/php/newAction.php" />
-      <change beforePath="$PROJECT_DIR$/php/start.php" afterPath="$PROJECT_DIR$/php/start.php" />
+      <change beforePath="$PROJECT_DIR$/php/generatemap.php" afterPath="$PROJECT_DIR$/php/generatemap.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -111,8 +109,8 @@
       <file leaf-file-name="generatemap.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/generatemap.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="37" column="49" lean-forward="false" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
+            <state relative-caret-position="17">
+              <caret line="1" column="3" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -169,7 +167,6 @@
         <option value="$PROJECT_DIR$/php/highscore.php" />
         <option value="$PROJECT_DIR$/start.php" />
         <option value="&lt;9485c37a-b4d5-44db-9b6b-0687b47a0b66&gt;/json/map.json" />
-        <option value="$PROJECT_DIR$/php/generatemap.php" />
         <option value="$PROJECT_DIR$/html/index.html" />
         <option value="$PROJECT_DIR$/html/start.html" />
         <option value="$PROJECT_DIR$/html/generatemap.html" />
@@ -178,6 +175,7 @@
         <option value="$PROJECT_DIR$/style.css" />
         <option value="$PROJECT_DIR$/php/start.php" />
         <option value="$PROJECT_DIR$/php/newAction.php" />
+        <option value="$PROJECT_DIR$/php/generatemap.php" />
       </list>
     </option>
   </component>
@@ -299,12 +297,12 @@
       <workItem from="1519628574929" duration="64317000" />
       <workItem from="1520233413693" duration="2010000" />
       <workItem from="1520240796365" duration="1567000" />
-      <workItem from="1520242714096" duration="6591000" />
+      <workItem from="1520242714096" duration="6956000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="154433000" />
+    <option name="totallyTimeSpent" value="154798000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -643,8 +641,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/generatemap.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="37" column="49" lean-forward="false" selection-start-line="37" selection-start-column="49" selection-end-line="37" selection-end-column="49" />
+        <state relative-caret-position="17">
+          <caret line="1" column="3" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
           <folding />
         </state>
       </provider>
