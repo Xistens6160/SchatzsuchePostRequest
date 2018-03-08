@@ -1,15 +1,15 @@
 <?php
 //stellt verbindung zur Datenbank her
-$servername = "192.168.58.193";
-$username = "schatzsuche@%";
-$password = "Passw0rd!";
-$dbname = "schatzsuche";
+include "classes/database.class.php";
+include "classes/gamestatus.class.php";
+include "classes/map.class.php";
+include "classes/orte.class.php";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+$db = new Database();
+$db->connect("192.168.58.193", "schatzsuche@%", "Passw0rd!", "schatzsuche");
 
+$gamestatus = new Gamestatus($db);
+$map = new Map($db);
 $response = [];
 
 /**
@@ -37,24 +37,19 @@ function getbackButton()
  */
 function startNewGame()
 {
-    global $steps, $response, $x, $y, $conn, $result, $sql, $startid;
+    global $response, $x, $y, $startid, $db, $gamestatus, $map, $orte;
 
-    $sql = "SELECT * FROM map";
-    $result = mysqli_query($conn, $sql);
-    $dataarray = mysqli_fetch_assoc($result);
-    $startid = $dataarray["start"];
+    $startid = $map->start;
 
-    $sql = "SELECT * FROM orte WHERE id=$startid";
-    $result = mysqli_query($conn, $sql);
-    $dataarray = mysqli_fetch_assoc($result);
-    $x = $dataarray["x"];
-    $y = $dataarray["y"];
-    $roomname = $dataarray["name"];
+    $orte = new Orte($db, $startid);
+    $x = $orte->x;
+    $y = $orte->y;
+    $roomname = $orte->name;
 
-    $steps = 0;
-    $time = time();
-    $sql = "UPDATE gamestatus SET starttime = '.$time.', ort_id = '.$startid.', currentstep = '.$steps.'  WHERE id = '1'";
-    mysqli_query($conn, $sql);
+    $gamestatus->starttime = time();
+    $gamestatus->currentstep = 0;
+    $gamestatus->ort_id = $startid;
+    $gamestatus->updateData();
 
     $response = ["art" => "Position: ", "output" => $roomname, "art2" => "", "steps" => "", "art3" => "", "time" => ""];
 }
@@ -64,23 +59,15 @@ function startNewGame()
  */
 function callLastPosition()
 {
-    global $steps, $x, $y, $response, $conn;
+    global $steps, $response, $db, $gamestatus;
 
-    $sql = "SELECT last_ort_id FROM gamestatus WHERE id='1'";
-    $result = mysqli_query($conn, $sql);
-    $dataarray = mysqli_fetch_assoc($result);
-    $newroomid = $dataarray["last_ort_id"];
+    $newroomid = $gamestatus->last_ort_id;
 
-    $sql = "SELECT * FROM orte WHERE id=$newroomid";
-    $result = mysqli_query($conn, $sql);
-    $dataarray = mysqli_fetch_assoc($result);
-    $x = $dataarray["x"];
-    $y = $dataarray["y"];
-    $roomname = $dataarray["name"];
+    $orte = new Orte($db,$newroomid);
+    $roomname = $orte->name;
 
-    $sql = "UPDATE gamestatus SET ort_id = '.$newroomid.' WHERE id = '1'";
-    mysqli_query($conn, $sql);
-
+    $gamestatus->ort_id = $newroomid;
+    $gamestatus->updateData();
 
     $response = ["art" => "Position: ", "output" => $roomname, "art2" => "Schritte: ", "steps" => $steps, "art3" => "", "time" => ""];
 }
@@ -90,29 +77,19 @@ function callLastPosition()
  */
 function callTipp()
 {
-    global $y, $x, $steps, $conn, $response;
+    global $steps, $db, $response, $gamestatus, $map;
 
-    $sql = "SELECT ort_id FROM gamestatus WHERE id='1'";
-    $result = mysqli_query($conn, $sql);
-    $dataarray = mysqli_fetch_assoc($result);
-    $roomid = $dataarray["ort_id"];
+    $roomid = $gamestatus->ort_id;
 
-    $sql = "SELECT * FROM orte WHERE id=$roomid";
-    $result = mysqli_query($conn, $sql);
-    $dataarray = mysqli_fetch_assoc($result);
-    $x = $dataarray["x"];
-    $y = $dataarray["y"];
+    $orte = new Orte($db,$roomid);
+    $x = $orte->x;
+    $y = $orte->y;
 
-    $sql = "SELECT * FROM map";
-    $result = mysqli_query($conn, $sql);
-    $dataarray = mysqli_fetch_assoc($result);
-    $goalid = $dataarray["goal"];
+    $goalid = $map->goal;
 
-    $sql = "SELECT * FROM orte WHERE id=$goalid";
-    $result = mysqli_query($conn, $sql);
-    $dataarray = mysqli_fetch_assoc($result);
-    $goalx = $dataarray["x"];
-    $goaly = $dataarray["y"];
+    $orte = new Orte($db, $goalid);
+    $goalx = $orte->x;
+    $goaly = $orte->y;
 
     if ($goalx != $x) {
         if ($goalx > $x) {
@@ -136,22 +113,16 @@ function callTipp()
  */
 function callNextRoom($action)
 {
-    global $y, $x, $steps, $response, $conn;
+    global  $steps ,$db, $response, $gamestatus;
 
-    $sql = "SELECT ort_id FROM gamestatus WHERE id='1'";
-    $result = mysqli_query($conn, $sql);
-    $dataarray = mysqli_fetch_assoc($result);
-    $roomid = $dataarray["ort_id"];
+    $roomid = $gamestatus->ort_id;
+    $gamestatus->last_ort_id= $roomid;
+    $gamestatus->updateData();
 
-    $sql = "UPDATE gamestatus SET last_ort_id = '.$roomid.' WHERE id = '1'";
-    mysqli_query($conn, $sql);
+    $orte = new Orte($db,$roomid);
+    $x = $orte->x;
+    $y = $orte->y;
 
-
-    $sql = "SELECT * FROM orte WHERE id=$roomid";
-    $result = mysqli_query($conn, $sql);
-    $dataarray = mysqli_fetch_assoc($result);
-    $x = $dataarray["x"] + 0;
-    $y = $dataarray["y"] + 0;
 
 
     if ($action == 1) {
@@ -168,12 +139,12 @@ function callNextRoom($action)
     }
 
     $sql = "SELECT * FROM orte WHERE x= $x AND y= $y";
-    $result = mysqli_query($conn, $sql);
-    $dataarray = mysqli_fetch_assoc($result);
+    $dataarray = $db->getData($sql);
     $roomname = $dataarray["name"];
     $newroomid = $dataarray["id"];
-    $sql = "UPDATE gamestatus SET ort_id = '.$newroomid.' WHERE id = '1'";
-    mysqli_query($conn, $sql);
+
+    $gamestatus->ort_id = $newroomid;
+    $gamestatus->updateData();
 
     // gibt bei leeren Feld "Sackgasse aus, sonst den ort der Koordinate
     if ($roomname != null) {
@@ -197,28 +168,20 @@ function callDirectionButton()
  */
 function callVictoryScreen()
 {
-    global $map, $x, $y, $steps, $response, $conn;
-    $sql = "SELECT * FROM gamestatus WHERE id='1'";
-    $result = mysqli_query($conn, $sql);
-    $dataarray = mysqli_fetch_assoc($result);
-    $beginntime = $dataarray["starttime"];
+    global $steps, $response, $db, $gamestatus;
+    $beginntime = $gamestatus->starttime;
     $time = time() - $beginntime;
 
     $response = ["art" => "Position: ", "output" => "Ziel", "art2" => "Schritte: ", "steps" => $steps, "art3" => "Zeit in Sekunden: ", "time" => $time];
     $response['body'] = getbackButton();
 
-//    $score = file_get_contents('../json/highscore.json');
-//    $score = json_decode($score);
-//    $score[] = ["steps" => $steps, "time" => $time];
-//    $score = json_encode($score);
-//    file_put_contents('../json/highscore.json', $score);
+    $sql = "INSERT INTO highscore SET steps = ".$steps.", times = ".$time;
+    $db->query($sql);
+
 }
 
 // holt sich die Daten
-$sql = "SELECT * FROM gamestatus WHERE id='1'";
-$result = mysqli_query($conn, $sql);
-$dataarray = mysqli_fetch_assoc($result);
-$steps = $dataarray["currentstep"] + 0;
+$steps = $gamestatus->currentstep + 0;
 
 $action = $_POST['action'];
 
@@ -229,7 +192,7 @@ if ($action >= 1 && $action <= 6) {
 
 // triggert beim laden der Seite und beim resetten des Spiels startNewGame
 if ($action == 0) {
-    startNewGame($map);
+    startNewGame();
 }
 
 // triggert nach einer Sackgasse callLastPosition
@@ -263,8 +226,8 @@ if ($response["output"] == "Sackgasse") {
 }
 
 // speichert Daten
-$sql = "UPDATE gamestatus SET currentstep= $steps WHERE id = '1'";
-mysqli_query($conn, $sql);
+    $gamestatus->currentstep = $steps;
+    $gamestatus->updateData();
 
 $json = json_encode($response);
 echo $json;

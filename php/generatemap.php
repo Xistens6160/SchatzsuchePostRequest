@@ -1,15 +1,11 @@
 <?php
 ini_set("display_errors",1);
-$servername = "192.168.58.193";
-$username = "schatzsuche@%";
-$password = "Passw0rd!";
-$dbname = "schatzsuche";
+include "classes/database.class.php";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$db = new Database();
+$db->connect("192.168.58.193", "schatzsuche@%", "Passw0rd!", "schatzsuche");
 
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+
 $maxX = $_GET['maxx'];
 $maxY = $_GET['maxy'];
 $maxX = $maxX -1;
@@ -23,24 +19,21 @@ $counter = 0;
  */
 function newGoal()
 {
-    global $map, $maxY, $maxX, $conn, $startid, $goalid;
+    global $maxY, $maxX, $db;
     $randomx = rand(0, $maxX);
     $randomy = rand(0, $maxY);
     $sql = "SELECT id FROM orte WHERE name = 'Start'";
-    $resultstart = mysqli_query($conn, $sql);
-    $startarray = mysqli_fetch_assoc($resultstart);
+    $startid = $db->getInformation($sql, "id");
     $sql = "SELECT id FROM orte WHERE x = $randomx AND y = $randomy";
-    $resultgoal = mysqli_query($conn, $sql);
-    $goalidarray = mysqli_fetch_assoc($resultgoal);
-    $startid = $startarray["id"];
-    $goalid = $goalidarray["id"];
+    $goalid = $db->getInformation($sql, "id");
 
 
     if ($goalid != $startid) {
         $sql = "UPDATE orte SET name = 'Ziel' WHERE y = $randomy AND x = $randomx";
-        mysqli_query($conn, $sql);
-        $sql = "INSERT INTO map SET start = '.$startid.', goal = '.$goalid.'";
-        mysqli_query($conn, $sql);
+        $db->query($sql);
+
+        $sql = "UPDATE map SET start = '.$startid.', goal = '.$goalid.' WHERE id='1'";
+        $db->query($sql);
     } else {
         newGoal();
     }
@@ -53,13 +46,13 @@ function newGoal()
  */
 function nextRoom($x, $y)
 {
-    global $maxY, $counter, $sql, $conn, $map;
+    global $maxY, $counter, $sql, $db;
 
     while ($y < $maxY) {
         $y += 1;
         $counter += 1;
         $sql = "INSERT INTO orte SET x = ".$x.", y = ".$y.", name = 'Raum ".$counter."'";
-        mysqli_query($conn,$sql);
+        $db->query($sql);
     }
     changex();
 }
@@ -78,11 +71,8 @@ function changex()
     }
 }
 
-
 $sql = "DELETE FROM orte";
-mysqli_query($conn,$sql);
-$sql = "DELETE FROM map";
-mysqli_query($conn,$sql);
+$db->query($sql);
 
 nextRoom($x, $y);
 
@@ -90,7 +80,7 @@ nextRoom($x, $y);
 $randomx = rand(0, $maxX);
 $randomy = rand(0, $maxY);
 $sql = "UPDATE orte SET name = 'Start' WHERE y = $randomy AND x = $randomx";
-mysqli_query($conn,$sql);
+$db->query($sql);
 
 newGoal();
 

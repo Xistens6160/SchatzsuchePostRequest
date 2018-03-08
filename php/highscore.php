@@ -1,4 +1,9 @@
 <?php
+include "classes/database.class.php";
+
+$db = new Database();
+$db->connect("192.168.58.193", "schatzsuche@%", "Passw0rd!", "schatzsuche");
+
 function calllist($step, $time)
 {
     return "<tr><td>" . $step . "</td> <td>" . $time . "</td></tr>";

@@ -2,10 +2,10 @@
 $response =[];
 $output = [];
 
-// orte.php einbinden
+// orte.class.phpss.php einbinden
 include 'orte.php';
 
-// map.php einbinden
+// map.class.class.php einbinden
 include 'map.php';
 
 // aktuellen Actionwert von der JS Function holen
