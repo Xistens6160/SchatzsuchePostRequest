@@ -5,13 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89d280b8-b658-4995-9f77-1df7b94bf14e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/php/classes/highscore.class.php" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/php/classes/gamestatus.class.php" afterPath="$PROJECT_DIR$/php/classes/gamestatus.class.php" />
-      <change beforePath="$PROJECT_DIR$/php/classes/map.class.php" afterPath="$PROJECT_DIR$/php/classes/map.class.php" />
-      <change beforePath="$PROJECT_DIR$/php/classes/orte.class.php" afterPath="$PROJECT_DIR$/php/classes/orte.class.php" />
-      <change beforePath="$PROJECT_DIR$/php/generatemap.php" afterPath="$PROJECT_DIR$/php/generatemap.php" />
-      <change beforePath="$PROJECT_DIR$/php/highscore.php" afterPath="$PROJECT_DIR$/php/highscore.php" />
       <change beforePath="$PROJECT_DIR$/php/newAction.php" afterPath="$PROJECT_DIR$/php/newAction.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,7 +33,7 @@
             <file leaf-file-name="generatemap.php" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/php/generatemap.php">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="-68">
+                  <state relative-caret-position="170">
                     <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
                     <folding>
                       <marker date="1520590531945" expanded="true" signature="893:973" ph="/** * weißt " />
@@ -49,22 +42,22 @@
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="newAction.php" pinned="false" current-in-tab="false">
+            <file leaf-file-name="newAction.php" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/php/newAction.php">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="-99">
-                    <caret line="183" column="27" lean-forward="false" selection-start-line="183" selection-start-column="27" selection-end-line="183" selection-end-column="27" />
+                  <state relative-caret-position="306">
+                    <caret line="149" column="30" lean-forward="true" selection-start-line="149" selection-start-column="30" selection-end-line="149" selection-end-column="30" />
                     <folding>
-                      <marker date="1520599648489" expanded="true" signature="3206:3244" ph="SELECT * FRO... orte" />
+                      <marker date="1520602839720" expanded="true" signature="3170:3208" ph="SELECT * FRO... orte" />
                     </folding>
                   </state>
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="highscore.php" pinned="false" current-in-tab="true">
+            <file leaf-file-name="highscore.php" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/php/highscore.php">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="527">
+                  <state relative-caret-position="595">
                     <caret line="35" column="38" lean-forward="false" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
                     <folding>
                       <marker date="1520602622248" expanded="false" signature="388:449" ph="..." />
@@ -256,9 +249,9 @@
         <option value="$PROJECT_DIR$/php/classes/gamestatus.class.php" />
         <option value="$PROJECT_DIR$/php/classes/orte.class.php" />
         <option value="$PROJECT_DIR$/php/classes/map.class.php" />
-        <option value="$PROJECT_DIR$/php/newAction.php" />
         <option value="$PROJECT_DIR$/php/classes/highscore.class.php" />
         <option value="$PROJECT_DIR$/php/highscore.php" />
+        <option value="$PROJECT_DIR$/php/newAction.php" />
       </list>
     </option>
   </component>
@@ -401,12 +394,12 @@
       <workItem from="1519628574929" duration="64317000" />
       <workItem from="1520233413693" duration="2010000" />
       <workItem from="1520240796365" duration="1567000" />
-      <workItem from="1520242714096" duration="77246000" />
+      <workItem from="1520242714096" duration="77481000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="225088000" />
+    <option name="totallyTimeSpent" value="225323000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -704,16 +697,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/generatemap.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-          <folding>
-            <marker date="1520590531945" expanded="true" signature="893:973" ph="/** * weißt " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/mysqli/mysqli.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
@@ -754,16 +737,6 @@
             <marker date="1520599330535" expanded="true" signature="1137:1177" ph="SELECT id FR... orte" />
             <marker date="1520599330535" expanded="true" signature="1320:1373" ph="SELECT id FR... orte" />
             <marker date="1520599330535" expanded="true" signature="1526:1542" ph="DELETE FROM orte... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/newAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-99">
-          <caret line="183" column="27" lean-forward="false" selection-start-line="183" selection-start-column="27" selection-end-line="183" selection-end-column="27" />
-          <folding>
-            <marker date="1520599648489" expanded="true" signature="3206:3244" ph="SELECT * FRO... orte" />
           </folding>
         </state>
       </provider>
@@ -818,12 +791,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/php/highscore.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
+        <state relative-caret-position="595">
           <caret line="35" column="38" lean-forward="false" selection-start-line="35" selection-start-column="38" selection-end-line="35" selection-end-column="38" />
           <folding>
             <marker date="1520602622248" expanded="false" signature="388:449" ph="..." />
             <marker date="1520602622248" expanded="true" signature="450:554" ph="..." />
             <marker date="1520602622248" expanded="true" signature="471:554" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/generatemap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding>
+            <marker date="1520590531945" expanded="true" signature="893:973" ph="/** * weißt " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/newAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="149" column="30" lean-forward="true" selection-start-line="149" selection-start-column="30" selection-end-line="149" selection-end-column="30" />
+          <folding>
+            <marker date="1520602839720" expanded="true" signature="3170:3208" ph="SELECT * FRO... orte" />
           </folding>
         </state>
       </provider>
