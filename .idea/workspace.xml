@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89d280b8-b658-4995-9f77-1df7b94bf14e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/php/classes/orte.class.php" afterPath="$PROJECT_DIR$/php/classes/orte.class.php" />
       <change beforePath="$PROJECT_DIR$/php/newAction.php" afterPath="$PROJECT_DIR$/php/newAction.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,10 +47,8 @@
               <entry file="file://$PROJECT_DIR$/php/newAction.php">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="306">
-                    <caret line="149" column="30" lean-forward="true" selection-start-line="149" selection-start-column="30" selection-end-line="149" selection-end-column="30" />
-                    <folding>
-                      <marker date="1520602839720" expanded="true" signature="3170:3208" ph="SELECT * FRO... orte" />
-                    </folding>
+                    <caret line="146" column="41" lean-forward="false" selection-start-line="146" selection-start-column="41" selection-end-line="146" selection-end-column="41" />
+                    <folding />
                   </state>
                 </provider>
               </entry>
@@ -133,7 +132,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="highscore.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="highscore.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/php/classes/highscore.class.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="476">
@@ -163,21 +162,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="orte.class.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="orte.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/classes/orte.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1054">
-              <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
+            <state relative-caret-position="756">
+              <caret line="72" column="26" lean-forward="false" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
               <folding>
-                <marker date="1520599330535" expanded="true" signature="327:355" ph="SELECT * FRO... orte" />
-                <marker date="1520599330535" expanded="true" signature="327:358" ph="SELECT * FRO... orte" />
-                <marker date="1520599330535" expanded="true" signature="617:680" ph="UPDATE orte... " />
-                <marker date="1520599330535" expanded="true" signature="787:851" ph="UPDATE orte... " />
-                <marker date="1520599330535" expanded="true" signature="955:980" ph="INSERT INTO orte... " />
-                <marker date="1520599330535" expanded="true" signature="955:1044" ph="INSERT INTO orte... " />
-                <marker date="1520599330535" expanded="true" signature="1137:1177" ph="SELECT id FR... orte" />
-                <marker date="1520599330535" expanded="true" signature="1320:1373" ph="SELECT id FR... orte" />
-                <marker date="1520599330535" expanded="true" signature="1526:1542" ph="DELETE FROM orte... " />
+                <marker date="1520603049024" expanded="true" signature="327:355" ph="SELECT * FRO... orte" />
+                <marker date="1520603049024" expanded="true" signature="327:358" ph="SELECT * FRO... orte" />
+                <marker date="1520603049024" expanded="true" signature="617:680" ph="UPDATE orte... " />
+                <marker date="1520603049024" expanded="true" signature="787:851" ph="UPDATE orte... " />
+                <marker date="1520603049024" expanded="true" signature="955:980" ph="INSERT INTO orte... " />
+                <marker date="1520603049024" expanded="true" signature="955:1044" ph="INSERT INTO orte... " />
+                <marker date="1520603049024" expanded="true" signature="1137:1177" ph="SELECT id FR... orte" />
+                <marker date="1520603049024" expanded="true" signature="1320:1373" ph="SELECT id FR... orte" />
+                <marker date="1520603049024" expanded="true" signature="1526:1542" ph="DELETE FROM orte... " />
+                <marker date="1520603049024" expanded="true" signature="1637:1681" ph="SELECT * FRO... orte" />
               </folding>
             </state>
           </provider>
@@ -247,10 +247,10 @@
         <option value="$PROJECT_DIR$/php/classes/database.class.php" />
         <option value="$PROJECT_DIR$/php/generatemap.php" />
         <option value="$PROJECT_DIR$/php/classes/gamestatus.class.php" />
-        <option value="$PROJECT_DIR$/php/classes/orte.class.php" />
         <option value="$PROJECT_DIR$/php/classes/map.class.php" />
         <option value="$PROJECT_DIR$/php/classes/highscore.class.php" />
         <option value="$PROJECT_DIR$/php/highscore.php" />
+        <option value="$PROJECT_DIR$/php/classes/orte.class.php" />
         <option value="$PROJECT_DIR$/php/newAction.php" />
       </list>
     </option>
@@ -394,12 +394,12 @@
       <workItem from="1519628574929" duration="64317000" />
       <workItem from="1520233413693" duration="2010000" />
       <workItem from="1520240796365" duration="1567000" />
-      <workItem from="1520242714096" duration="77481000" />
+      <workItem from="1520242714096" duration="77772000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="225323000" />
+    <option name="totallyTimeSpent" value="225614000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -723,24 +723,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/classes/orte.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1054">
-          <caret line="67" column="0" lean-forward="false" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-          <folding>
-            <marker date="1520599330535" expanded="true" signature="327:355" ph="SELECT * FRO... orte" />
-            <marker date="1520599330535" expanded="true" signature="327:358" ph="SELECT * FRO... orte" />
-            <marker date="1520599330535" expanded="true" signature="617:680" ph="UPDATE orte... " />
-            <marker date="1520599330535" expanded="true" signature="787:851" ph="UPDATE orte... " />
-            <marker date="1520599330535" expanded="true" signature="955:980" ph="INSERT INTO orte... " />
-            <marker date="1520599330535" expanded="true" signature="955:1044" ph="INSERT INTO orte... " />
-            <marker date="1520599330535" expanded="true" signature="1137:1177" ph="SELECT id FR... orte" />
-            <marker date="1520599330535" expanded="true" signature="1320:1373" ph="SELECT id FR... orte" />
-            <marker date="1520599330535" expanded="true" signature="1526:1542" ph="DELETE FROM orte... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/classes/map.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -777,18 +759,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/php/classes/highscore.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
-          <folding>
-            <marker date="1520602600328" expanded="true" signature="210:243" ph="INSERT INTO highscore... " />
-            <marker date="1520602600328" expanded="true" signature="210:265" ph="INSERT INTO highscore... " />
-            <marker date="1520602600328" expanded="true" signature="360:383" ph="SELECT * FRO... highscore" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/highscore.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
@@ -811,13 +781,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/php/classes/highscore.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="1" lean-forward="true" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
+          <folding>
+            <marker date="1520602600328" expanded="true" signature="210:243" ph="INSERT INTO highscore... " />
+            <marker date="1520602600328" expanded="true" signature="210:265" ph="INSERT INTO highscore... " />
+            <marker date="1520602600328" expanded="true" signature="360:383" ph="SELECT * FRO... highscore" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/classes/orte.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="72" column="26" lean-forward="false" selection-start-line="72" selection-start-column="26" selection-end-line="72" selection-end-column="26" />
+          <folding>
+            <marker date="1520603049024" expanded="true" signature="327:355" ph="SELECT * FRO... orte" />
+            <marker date="1520603049024" expanded="true" signature="327:358" ph="SELECT * FRO... orte" />
+            <marker date="1520603049024" expanded="true" signature="617:680" ph="UPDATE orte... " />
+            <marker date="1520603049024" expanded="true" signature="787:851" ph="UPDATE orte... " />
+            <marker date="1520603049024" expanded="true" signature="955:980" ph="INSERT INTO orte... " />
+            <marker date="1520603049024" expanded="true" signature="955:1044" ph="INSERT INTO orte... " />
+            <marker date="1520603049024" expanded="true" signature="1137:1177" ph="SELECT id FR... orte" />
+            <marker date="1520603049024" expanded="true" signature="1320:1373" ph="SELECT id FR... orte" />
+            <marker date="1520603049024" expanded="true" signature="1526:1542" ph="DELETE FROM orte... " />
+            <marker date="1520603049024" expanded="true" signature="1637:1681" ph="SELECT * FRO... orte" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/newAction.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="149" column="30" lean-forward="true" selection-start-line="149" selection-start-column="30" selection-end-line="149" selection-end-column="30" />
-          <folding>
-            <marker date="1520602839720" expanded="true" signature="3170:3208" ph="SELECT * FRO... orte" />
-          </folding>
+          <caret line="146" column="41" lean-forward="false" selection-start-line="146" selection-start-column="41" selection-end-line="146" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>

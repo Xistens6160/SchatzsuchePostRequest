@@ -141,8 +141,10 @@ function callNextRoom($action)
         $y -= 1;
     }
 
-    $sql = "SELECT * FROM orte WHERE x= $x AND y= $y";
-    $dataarray = $db->getData($sql);
+
+    $orte->x = $x;
+    $orte->y = $y;
+    $dataarray = $orte->selectNextRoom();
     $roomname = $dataarray["name"];
     $newroomid = $dataarray["id"];
 

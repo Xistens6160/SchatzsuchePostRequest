@@ -63,7 +63,13 @@ class Orte
     function clearTable()
     {
         $sql = "DELETE FROM orte";
-        $this->db->query($sql);
+         $this->db->query($sql);
     }
 
+    function selectNextRoom()
+    {
+        $sql = "SELECT * FROM orte WHERE x= $this->x AND y= $this->y";
+        $dataarray = $this->db->getData($sql);
+        return $dataarray;
+    }
 }
