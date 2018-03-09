@@ -1,15 +1,17 @@
 <?php
 include "classes/database.class.php";
+include "classes/highscore.class.php";
 
 $db = new Database();
 $db->connect("192.168.58.193", "schatzsuche@%", "Passw0rd!", "schatzsuche");
+
+$highscore = new Highscore($db);
+
 
 function calllist($step, $time)
 {
     return "<tr><td>" . $step . "</td> <td>" . $time . "</td></tr>";
 }
-
-;
 
 function getTableHtml($tabledata)
 {
@@ -25,9 +27,13 @@ function getTableHtml($tabledata)
 }
 
 // holt sich die Scores aus der Text Datei
-$response = [];
-$json = file_get_contents('../json/highscore.json');
-$tempdata = json_decode($json);
+//$response = [];
+//$json = file_get_contents('../json/highscore.json');
+//$tempdata = json_decode($json);
+
+$tempdata=[];
+
+$tempdata = $highscore->displayData();
 
 // sortiert die Liste nach den Schritten aufsteigend
 asort($tempdata);

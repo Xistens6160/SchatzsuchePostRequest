@@ -1,10 +1,14 @@
 <?php
 ini_set("display_errors",1);
 include "classes/database.class.php";
+include "classes/map.class.php";
+include "classes/orte.class.php";
 
 $db = new Database();
 $db->connect("192.168.58.193", "schatzsuche@%", "Passw0rd!", "schatzsuche");
 
+$map = new Map($db);
+$orte = new Orte($db);
 
 $maxX = $_GET['maxx'];
 $maxY = $_GET['maxy'];
@@ -19,21 +23,22 @@ $counter = 0;
  */
 function newGoal()
 {
-    global $maxY, $maxX, $db;
+    global $maxY, $maxX, $map, $orte;
     $randomx = rand(0, $maxX);
     $randomy = rand(0, $maxY);
-    $sql = "SELECT id FROM orte WHERE name = 'Start'";
-    $startid = $db->getInformation($sql, "id");
-    $sql = "SELECT id FROM orte WHERE x = $randomx AND y = $randomy";
-    $goalid = $db->getInformation($sql, "id");
+    $startid = $orte->selectStartID();
+    $orte->randomx = $randomx;
+    $orte->randomy = $randomy;
+    $goalid = $orte->selectGoalID();
 
 
     if ($goalid != $startid) {
-        $sql = "UPDATE orte SET name = 'Ziel' WHERE y = $randomy AND x = $randomx";
-        $db->query($sql);
+        $orte->updateGoalID();
 
-        $sql = "UPDATE map SET start = '.$startid.', goal = '.$goalid.' WHERE id='1'";
-        $db->query($sql);
+        $map->start=$startid;
+        $map->goal=$goalid;
+        $map->updateData();
+
     } else {
         newGoal();
     }
@@ -46,13 +51,16 @@ function newGoal()
  */
 function nextRoom($x, $y)
 {
-    global $maxY, $counter, $sql, $db;
+    global $maxY, $counter, $orte;
 
     while ($y < $maxY) {
         $y += 1;
         $counter += 1;
-        $sql = "INSERT INTO orte SET x = ".$x.", y = ".$y.", name = 'Raum ".$counter."'";
-        $db->query($sql);
+
+        $orte->x=$x;
+        $orte->y=$y;
+        $orte->counter=$counter;
+        $orte->insertData();
     }
     changex();
 }
@@ -71,16 +79,16 @@ function changex()
     }
 }
 
-$sql = "DELETE FROM orte";
-$db->query($sql);
+$orte->clearTable();
 
 nextRoom($x, $y);
 
 
 $randomx = rand(0, $maxX);
 $randomy = rand(0, $maxY);
-$sql = "UPDATE orte SET name = 'Start' WHERE y = $randomy AND x = $randomx";
-$db->query($sql);
+$orte->randomy = $randomy;
+$orte->randomx = $randomx;
+$orte->updateStartID();
 
 newGoal();
 

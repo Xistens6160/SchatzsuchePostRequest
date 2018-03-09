@@ -4,12 +4,14 @@ include "classes/database.class.php";
 include "classes/gamestatus.class.php";
 include "classes/map.class.php";
 include "classes/orte.class.php";
+include "classes/highscore.class.php";
 
 $db = new Database();
 $db->connect("192.168.58.193", "schatzsuche@%", "Passw0rd!", "schatzsuche");
 
 $gamestatus = new Gamestatus($db);
 $map = new Map($db);
+$highscore = new Highscore($db);
 $response = [];
 
 /**
@@ -37,7 +39,7 @@ function getbackButton()
  */
 function startNewGame()
 {
-    global $response, $x, $y, $startid, $db, $gamestatus, $map, $orte;
+    global $response, $x, $y, $startid, $db, $gamestatus, $steps, $map, $orte;
 
     $startid = $map->start;
 
@@ -46,8 +48,9 @@ function startNewGame()
     $y = $orte->y;
     $roomname = $orte->name;
 
+    $steps = 0;
+
     $gamestatus->starttime = time();
-    $gamestatus->currentstep = 0;
     $gamestatus->ort_id = $startid;
     $gamestatus->updateData();
 
@@ -138,6 +141,7 @@ function callNextRoom($action)
         $y -= 1;
     }
 
+    $orte = new Orte($db, $roomid);
     $sql = "SELECT * FROM orte WHERE x= $x AND y= $y";
     $dataarray = $db->getData($sql);
     $roomname = $dataarray["name"];
@@ -168,16 +172,16 @@ function callDirectionButton()
  */
 function callVictoryScreen()
 {
-    global $steps, $response, $db, $gamestatus;
+    global $steps, $response, $highscore, $db, $gamestatus;
     $beginntime = $gamestatus->starttime;
     $time = time() - $beginntime;
 
     $response = ["art" => "Position: ", "output" => "Ziel", "art2" => "Schritte: ", "steps" => $steps, "art3" => "Zeit in Sekunden: ", "time" => $time];
     $response['body'] = getbackButton();
 
-    $sql = "INSERT INTO highscore SET steps = ".$steps.", times = ".$time;
-    $db->query($sql);
-
+    $highscore->steps = $steps;
+    $highscore->time = $time;
+    $highscore->putScore();
 }
 
 // holt sich die Daten

@@ -28,5 +28,4 @@ class Map
      $sql = "UPDATE map SET start = '.$this->start.', goal = '.$this->goal.' WHERE id='1'";
      $this->db->query($sql);
     }
-
 }
