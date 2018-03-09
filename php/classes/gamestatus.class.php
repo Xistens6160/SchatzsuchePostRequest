@@ -27,16 +27,16 @@ class Gamestatus
         $this->last_ort_id = $dataarray["last_ort_id"];
     }
 
-    function updateData(){
+    function updateData()
+    {
 
         $sql = "UPDATE gamestatus 
         SET currentstep = $this->currentstep,
             starttime = '.$this->starttime.',
              ort_id = '.$this->ort_id.',
-            last_ort_id =".$this->last_ort_id;
-         $this->db->query($sql);
+            last_ort_id =" . $this->last_ort_id;
+        $this->db->query($sql);
     }
-
 
 
 }

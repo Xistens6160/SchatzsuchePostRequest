@@ -42,7 +42,7 @@ class Orte
 
     function insertData()
     {
-        $sql = "INSERT INTO orte SET x = ".$this->x.", y = ".$this->y.", name = 'Raum ".$this->counter."'";
+        $sql = "INSERT INTO orte SET x = " . $this->x . ", y = " . $this->y . ", name = 'Raum " . $this->counter . "'";
         $this->db->query($sql);
     }
 
@@ -63,7 +63,7 @@ class Orte
     function clearTable()
     {
         $sql = "DELETE FROM orte";
-         $this->db->query($sql);
+        $this->db->query($sql);
     }
 
     function selectNextRoom()

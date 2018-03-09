@@ -24,18 +24,21 @@ class Database
         return $result;
     }
 
-    function fetch($result){
+    function fetch($result)
+    {
         $dataarray = mysqli_fetch_assoc($result);
-        return  $dataarray;
+        return $dataarray;
     }
 
-    function getData($sql){
+    function getData($sql)
+    {
         $result = $this->query($sql);
         $dataarray = $this->fetch($result);
-        return  $dataarray;
+        return $dataarray;
     }
 
-    function getInformation($sql,$data){
+    function getInformation($sql, $data)
+    {
         $dataarray = $this->getData($sql);
         $data = $dataarray[$data];
         return $data;

@@ -18,12 +18,13 @@ class Highscore
         $this->db->query($sql);
     }
 
-   function displayData(){
-       $sql = "SELECT * FROM highscore";
-       $results = $this->db->query($sql);
-       while($row = mysqli_fetch_assoc($results)) {
-           $tempdata[] = ["steps" => $row["steps"], "time" => $row["times"]];
-       }
-       return $tempdata;
-   }
+    function displayData()
+    {
+        $sql = "SELECT * FROM highscore";
+        $results = $this->db->query($sql);
+        while ($row = mysqli_fetch_assoc($results)) {
+            $tempdata[] = ["steps" => $row["steps"], "time" => $row["times"]];
+        }
+        return $tempdata;
+    }
 }

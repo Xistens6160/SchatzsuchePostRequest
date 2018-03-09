@@ -31,7 +31,7 @@ function getTableHtml($tabledata)
 //$json = file_get_contents('../json/highscore.json');
 //$tempdata = json_decode($json);
 
-$tempdata=[];
+$tempdata = [];
 
 $tempdata = $highscore->displayData();
 

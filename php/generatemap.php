@@ -1,5 +1,5 @@
 <?php
-ini_set("display_errors",1);
+ini_set("display_errors", 1);
 include "classes/database.class.php";
 include "classes/map.class.php";
 include "classes/orte.class.php";
@@ -12,8 +12,8 @@ $orte = new Orte($db);
 
 $maxX = $_GET['maxx'];
 $maxY = $_GET['maxy'];
-$maxX = $maxX -1;
-$maxY = $maxY -1;
+$maxX = $maxX - 1;
+$maxY = $maxY - 1;
 $x = 0;
 $y = -1;
 $counter = 0;
@@ -35,8 +35,8 @@ function newGoal()
     if ($goalid != $startid) {
         $orte->updateGoalID();
 
-        $map->start=$startid;
-        $map->goal=$goalid;
+        $map->start = $startid;
+        $map->goal = $goalid;
         $map->updateData();
 
     } else {
@@ -57,9 +57,9 @@ function nextRoom($x, $y)
         $y += 1;
         $counter += 1;
 
-        $orte->x=$x;
-        $orte->y=$y;
-        $orte->counter=$counter;
+        $orte->x = $x;
+        $orte->y = $y;
+        $orte->counter = $counter;
         $orte->insertData();
     }
     changex();
