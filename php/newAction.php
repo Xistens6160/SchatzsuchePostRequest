@@ -1,14 +1,16 @@
 <?php
-//stellt verbindung zur Datenbank her
+//greift auf die Klassen zu
 include "classes/database.class.php";
 include "classes/gamestatus.class.php";
 include "classes/map.class.php";
 include "classes/orte.class.php";
 include "classes/highscore.class.php";
 
+//stellt die Verbindung zur Datenbank her
 $db = new Database();
 $db->connect("192.168.58.193", "schatzsuche@%", "Passw0rd!", "schatzsuche");
 
+//erstellt die Objekte
 $gamestatus = new Gamestatus($db);
 $map = new Map($db);
 $highscore = new Highscore($db);
@@ -31,7 +33,9 @@ function getButtonHtml($class, $var, $action)
  */
 function getbackButton()
 {
+
     return "<button id='getbackbutton' onclick=\"location.href = '../html/start.html';\">Zurück zur Startseite</button>";
+
 }
 
 /**
@@ -141,7 +145,6 @@ function callNextRoom($action)
         $y -= 1;
     }
 
-
     $orte->x = $x;
     $orte->y = $y;
     $dataarray = $orte->selectNextRoom();
@@ -173,13 +176,16 @@ function callDirectionButton()
  */
 function callVictoryScreen()
 {
-    global $steps, $response, $highscore, $db, $gamestatus;
+    global $steps, $response, $highscore,$gamestatus;
     $beginntime = $gamestatus->starttime;
     $time = time() - $beginntime;
 
     $response = ["art" => "Position: ", "output" => "Ziel", "art2" => "Schritte: ", "steps" => $steps, "art3" => "Zeit in Sekunden: ", "time" => $time];
     $response['body'] = getbackButton();
 
+    $name = $gamestatus->name;
+
+    $highscore->name=$name;
     $highscore->steps = $steps;
     $highscore->time = $time;
     $highscore->putScore();

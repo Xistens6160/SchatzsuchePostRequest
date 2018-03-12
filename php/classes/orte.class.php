@@ -28,24 +28,37 @@ class Orte
         $this->name = $dataarray["name"];
     }
 
+    /**
+     * aktualisiert die GoalID
+     */
     function updateGoalID()
     {
         $sql = "UPDATE orte SET name = 'Ziel' WHERE y = $this->randomy AND x = $this->randomx";
         $this->db->query($sql);
     }
 
+    /**
+     * aktualisiert die StartID
+     */
     function updateStartID()
     {
         $sql = "UPDATE orte SET name = 'Start' WHERE y = $this->randomy AND x = $this->randomx";
         $this->db->query($sql);
     }
 
+    /**
+     * schreibt jeden neuen Raum in die Tabelle
+     */
     function insertData()
     {
         $sql = "INSERT INTO orte SET x = " . $this->x . ", y = " . $this->y . ", name = 'Raum " . $this->counter . "'";
         $this->db->query($sql);
     }
 
+    /**
+     * @return mixed
+     * holt sich die StartID
+     */
     function selectStartID()
     {
         $sql = "SELECT id FROM orte WHERE name = 'Start'";
@@ -53,6 +66,10 @@ class Orte
         return $startid;
     }
 
+    /**
+     * @return mixed
+     * holt sich die GoalID
+     */
     function selectGoalID()
     {
         $sql = "SELECT id FROM orte WHERE x = $this->randomx AND y = $this->randomy";
@@ -60,12 +77,19 @@ class Orte
         return $goalid;
     }
 
+    /**
+     * löscht den Inhalt der Tabelle
+     */
     function clearTable()
     {
         $sql = "DELETE FROM orte";
         $this->db->query($sql);
     }
 
+    /**
+     * @return mixed
+     * gibt den neuen Raum zurück
+     */
     function selectNextRoom()
     {
         $sql = "SELECT * FROM orte WHERE x= $this->x AND y= $this->y";

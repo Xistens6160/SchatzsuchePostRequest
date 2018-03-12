@@ -79,11 +79,12 @@ function changex()
     }
 }
 
+//löscht die alte Map
 $orte->clearTable();
 
 nextRoom($x, $y);
 
-
+//erstellt ein random Start und speichert den
 $randomx = rand(0, $maxX);
 $randomy = rand(0, $maxY);
 $orte->randomy = $randomy;

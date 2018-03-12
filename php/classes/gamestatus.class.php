@@ -13,8 +13,14 @@ class Gamestatus
     public $currentstep;
     public $ort_id;
     public $last_ort_id;
+    public $name;
     private $db;
 
+    /**
+     * Gamestatus constructor.
+     * @param $db
+     * baut das Objekt
+     */
     function __construct($db)
     {
         $this->db = $db;
@@ -25,18 +31,21 @@ class Gamestatus
         $this->currentstep = $dataarray["currentstep"];
         $this->ort_id = $dataarray["ort_id"];
         $this->last_ort_id = $dataarray["last_ort_id"];
+        $this->name = $dataarray["playername"];
     }
 
+
+    /**
+     * aktualisiert die Datein
+     */
     function updateData()
     {
-
         $sql = "UPDATE gamestatus 
         SET currentstep = $this->currentstep,
-            starttime = '.$this->starttime.',
-             ort_id = '.$this->ort_id.',
+            starttime = " . $this->starttime . ",
+             ort_id = " . $this->ort_id . ",
+             playername = '" . $this->name . "',
             last_ort_id =" . $this->last_ort_id;
         $this->db->query($sql);
     }
-
-
 }

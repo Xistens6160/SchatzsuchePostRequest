@@ -8,9 +8,9 @@ $db->connect("192.168.58.193", "schatzsuche@%", "Passw0rd!", "schatzsuche");
 $highscore = new Highscore($db);
 
 
-function calllist($step, $time)
+function calllist($step, $time, $name)
 {
-    return "<tr><td>" . $step . "</td> <td>" . $time . "</td></tr>";
+    return "<tr><td>" . $step . "</td> <td>" . $time . "</td> <td>" . $name . "</td></tr>";
 }
 
 function getTableHtml($tabledata)
@@ -19,6 +19,7 @@ function getTableHtml($tabledata)
                 <tr>
                 <th>Steps</th>
                 <th>Time</th>
+                <th>Name</th>
                 </tr>';
     $html .= $tabledata;
 
@@ -26,11 +27,7 @@ function getTableHtml($tabledata)
     return $html;
 }
 
-// holt sich die Scores aus der Text Datei
-//$response = [];
-//$json = file_get_contents('../json/highscore.json');
-//$tempdata = json_decode($json);
-
+// holt sich die Scores aus der Datenbank
 $tempdata = [];
 
 $tempdata = $highscore->displayData();
@@ -44,7 +41,8 @@ foreach ($tempdata as $row) {
     $row = (array)$row;
     $steps = $row["steps"];
     $time = $row["time"];
-    $tabledata .= calllist($steps, $time);
+    $name = $row["name"];
+    $tabledata .= calllist($steps, $time, $name);
 }
 $response['body'] = getTableHtml($tabledata);
 $json = json_encode($response);

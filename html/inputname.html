@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <meta charset="UTF-8">
+    <title>Input Name</title>
+</head>
+<body>
+<div class="wrapper">
+    <h1>Gib dein Namen ein</h1>
+    <div class="text">
+        Bitte gib dein Namen ein, damit dein Score mit deinem Namen in die Highscoreliste eingetragen werden kann.
+    </div>
+    <div id="dropdown">
+        <form action="../php/inputName.php">
+            <div class="text"> Name : <input type="text" min="3" max="50" value="" name="name"></div>
+            <br>
+            <input class="buttons" type="submit" value="Bestätigen">
+            <br>
+        </form>
+        <button class="button" onclick="location.href = 'start.html';">Zurück zur Startseite</button>
+    </div>
+    <br>
+</div>
+</body>
+</html>
