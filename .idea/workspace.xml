@@ -5,19 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89d280b8-b658-4995-9f77-1df7b94bf14e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html/inputname.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/php/inputName.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/highscore.html" afterPath="$PROJECT_DIR$/html/highscore.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/html/start.html" afterPath="$PROJECT_DIR$/html/start.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/classes/gamestatus.class.php" afterPath="$PROJECT_DIR$/php/classes/gamestatus.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/classes/highscore.class.php" afterPath="$PROJECT_DIR$/php/classes/highscore.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/classes/orte.class.php" afterPath="$PROJECT_DIR$/php/classes/orte.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/generatemap.php" afterPath="$PROJECT_DIR$/php/generatemap.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/highscore.php" afterPath="$PROJECT_DIR$/php/highscore.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/newAction.php" afterPath="$PROJECT_DIR$/php/newAction.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Notes/currentstep.txt" afterPath="$PROJECT_DIR$/unused/Notes/currentstep.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Notes/currenttime.txt" afterPath="$PROJECT_DIR$/unused/Notes/currenttime.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Notes/lastx.txt" afterPath="$PROJECT_DIR$/unused/Notes/lastx.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Notes/lasty.txt" afterPath="$PROJECT_DIR$/unused/Notes/lasty.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Notes/safex.txt" afterPath="$PROJECT_DIR$/unused/Notes/safex.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Notes/safey.txt" afterPath="$PROJECT_DIR$/unused/Notes/safey.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,7 +45,7 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
+            <state relative-caret-position="494">
               <caret line="130" column="17" lean-forward="true" selection-start-line="130" selection-start-column="17" selection-end-line="130" selection-end-column="17" />
               <folding />
             </state>
@@ -259,11 +252,6 @@
             <path>
               <item name="SchatzsuchePostRequest" type="b2602c69:ProjectViewProjectNode" />
               <item name="SchatzsuchePostRequest" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Notes" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="SchatzsuchePostRequest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SchatzsuchePostRequest" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="php" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -271,6 +259,11 @@
               <item name="SchatzsuchePostRequest" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="php" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="classes" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="SchatzsuchePostRequest" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchatzsuchePostRequest" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="unused" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="SchatzsuchePostRequest" type="b2602c69:ProjectViewProjectNode" />
@@ -300,11 +293,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\gue\PhpstormProjects\SchatzsuchePostRequest\unused" />
       <recent name="C:\Users\gue\PhpstormProjects\SchatzsuchePostRequest\php" />
       <recent name="C:\Users\gue\PhpstormProjects\SchatzsuchePostRequest\json" />
       <recent name="C:\Users\gue\PhpstormProjects\SchatzsuchePostRequest" />
       <recent name="C:\Users\gue\PhpstormProjects\SchatzsuchePostRequest\html" />
-      <recent name="C:\Users\gue\PhpstormProjects\SchatzsuchePostRequest\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -348,12 +341,12 @@
       <workItem from="1520233413693" duration="2010000" />
       <workItem from="1520240796365" duration="1567000" />
       <workItem from="1520242714096" duration="78041000" />
-      <workItem from="1520840480577" duration="13971000" />
+      <workItem from="1520840480577" duration="14315000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="239854000" />
+    <option name="totallyTimeSpent" value="240198000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -366,10 +359,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16094421" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15495208" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15495208" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917467" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.081573896" sideWeight="0.5042598" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17838125" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -476,14 +468,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/currenttime" />
-    <entry file="file://$PROJECT_DIR$/Notes/currenttime.txt">
+    <entry file="file://$PROJECT_DIR$/unused/Notes/currenttime.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Notes/currentstep.txt">
+    <entry file="file://$PROJECT_DIR$/unused/Notes/currentstep.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
@@ -502,28 +494,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Notes/safey.txt">
+    <entry file="file://$PROJECT_DIR$/unused/Notes/safey.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Notes/safex.txt">
+    <entry file="file://$PROJECT_DIR$/unused/Notes/safex.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Notes/lasty.txt">
+    <entry file="file://$PROJECT_DIR$/unused/Notes/lasty.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Notes/lastx.txt">
+    <entry file="file://$PROJECT_DIR$/unused/Notes/lastx.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -761,7 +753,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
+        <state relative-caret-position="494">
           <caret line="130" column="17" lean-forward="true" selection-start-line="130" selection-start-column="17" selection-end-line="130" selection-end-column="17" />
           <folding />
         </state>
