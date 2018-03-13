@@ -25,7 +25,7 @@ class Map
 
     function updateData()
     {
-     $sql = "UPDATE map SET start = '.$this->start.', goal = '.$this->goal.' WHERE id='1'";
-     $this->db->query($sql);
+        $sql = "UPDATE map SET start = '.$this->start.', goal = '.$this->goal.' WHERE id='1'";
+        $this->db->query($sql);
     }
 }

@@ -70,7 +70,7 @@ function callLastPosition()
 
     $newroomid = $gamestatus->last_ort_id;
 
-    $orte = new Orte($db,$newroomid);
+    $orte = new Orte($db, $newroomid);
     $roomname = $orte->name;
 
     $gamestatus->ort_id = $newroomid;
@@ -88,7 +88,7 @@ function callTipp()
 
     $roomid = $gamestatus->ort_id;
 
-    $orte = new Orte($db,$roomid);
+    $orte = new Orte($db, $roomid);
     $x = $orte->x;
     $y = $orte->y;
 
@@ -120,16 +120,15 @@ function callTipp()
  */
 function callNextRoom($action)
 {
-    global  $steps ,$db, $response, $gamestatus;
+    global $steps, $db, $response, $gamestatus;
 
     $roomid = $gamestatus->ort_id;
-    $gamestatus->last_ort_id= $roomid;
+    $gamestatus->last_ort_id = $roomid;
     $gamestatus->updateData();
 
-    $orte = new Orte($db,$roomid);
+    $orte = new Orte($db, $roomid);
     $x = $orte->x;
     $y = $orte->y;
-
 
 
     if ($action == 1) {
@@ -176,7 +175,7 @@ function callDirectionButton()
  */
 function callVictoryScreen()
 {
-    global $steps, $response, $highscore,$gamestatus;
+    global $steps, $response, $highscore, $gamestatus;
     $beginntime = $gamestatus->starttime;
     $time = time() - $beginntime;
 
@@ -185,7 +184,7 @@ function callVictoryScreen()
 
     $name = $gamestatus->name;
 
-    $highscore->name=$name;
+    $highscore->name = $name;
     $highscore->steps = $steps;
     $highscore->time = $time;
     $highscore->putScore();
@@ -237,8 +236,8 @@ if ($response["output"] == "Sackgasse") {
 }
 
 // speichert Daten
-    $gamestatus->currentstep = $steps;
-    $gamestatus->updateData();
+$gamestatus->currentstep = $steps;
+$gamestatus->updateData();
 
 $json = json_encode($response);
 echo $json;
