@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/php/generatemap.php" line="95" />
+    <bookmark url="file://$PROJECT_DIR$/php/generatemap.php" line="69" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89d280b8-b658-4995-9f77-1df7b94bf14e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/php/generatemap.php" afterPath="$PROJECT_DIR$/php/generatemap.php" />
-    </list>
+    <list default="true" id="89d280b8-b658-4995-9f77-1df7b94bf14e" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1820">
-              <caret line="130" column="17" lean-forward="true" selection-start-line="130" selection-start-column="17" selection-end-line="130" selection-end-column="17" />
+              <caret line="130" column="17" lean-forward="false" selection-start-line="130" selection-start-column="17" selection-end-line="130" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -50,10 +48,10 @@
       <file leaf-file-name="generatemap.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/php/generatemap.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="68" column="21" lean-forward="false" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="21" />
+            <state relative-caret-position="612">
+              <caret line="72" column="25" lean-forward="false" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
               <folding>
-                <marker date="1520927311265" expanded="true" signature="900:980" ph="/** * weißt " />
+                <marker date="1520928993038" expanded="true" signature="900:980" ph="/** * weißt " />
               </folding>
             </state>
           </provider>
@@ -73,7 +71,7 @@
         <entry file="file://$PROJECT_DIR$/html/highscore.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
-              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -83,16 +81,16 @@
         <entry file="file://$PROJECT_DIR$/php/classes/orte.class.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="459">
-              <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding>
-                <marker date="1520863809968" expanded="true" signature="327:355" ph="SELECT * FRO... orte" />
-                <marker date="1520863809968" expanded="true" signature="664:727" ph="UPDATE orte " />
-                <marker date="1520863809968" expanded="true" signature="882:946" ph="UPDATE orte " />
-                <marker date="1520863809968" expanded="true" signature="1114:1215" ph="INSERT INTO orte... " />
-                <marker date="1520863809968" expanded="true" signature="1374:1414" ph="SELECT id FR... orte" />
-                <marker date="1520863809968" expanded="true" signature="1622:1675" ph="SELECT id FR... orte" />
-                <marker date="1520863809968" expanded="true" signature="1881:1897" ph="DELETE FROM " />
-                <marker date="1520863809968" expanded="true" signature="2062:2106" ph="SELECT * FRO... orte" />
+                <marker date="1520928993036" expanded="true" signature="327:355" ph="SELECT * FRO... orte" />
+                <marker date="1520928993036" expanded="true" signature="664:727" ph="UPDATE orte " />
+                <marker date="1520928993036" expanded="true" signature="882:946" ph="UPDATE orte " />
+                <marker date="1520928993036" expanded="true" signature="1114:1215" ph="INSERT INTO orte... " />
+                <marker date="1520928993036" expanded="true" signature="1374:1414" ph="SELECT id FR... orte" />
+                <marker date="1520928993036" expanded="true" signature="1622:1675" ph="SELECT id FR... orte" />
+                <marker date="1520928993036" expanded="true" signature="1881:1897" ph="DELETE FROM " />
+                <marker date="1520928993036" expanded="true" signature="2062:2106" ph="SELECT * FRO... orte" />
               </folding>
             </state>
           </provider>
@@ -104,14 +102,14 @@
             <state relative-caret-position="561">
               <caret line="33" column="80" lean-forward="false" selection-start-line="33" selection-start-column="80" selection-end-line="33" selection-end-column="80" />
               <folding>
-                <marker date="1520864004390" expanded="true" signature="274:329" ph="INSERT INTO highscore... " />
-                <marker date="1520864004390" expanded="true" signature="274:340" ph="INSERT INTO highscore... " />
-                <marker date="1520864004390" expanded="true" signature="274:354" ph="INSERT INTO highscore... " />
-                <marker date="1520864004390" expanded="true" signature="274:355" ph="INSERT INTO highscore... " />
-                <marker date="1520864004390" expanded="true" signature="274:356" ph="INSERT INTO highscore... " />
-                <marker date="1520864004390" expanded="true" signature="274:367" ph="INSERT INTO highscore... " />
-                <marker date="1520864004390" expanded="true" signature="274:368" ph="INSERT INTO highscore... " />
-                <marker date="1520864004390" expanded="true" signature="510:533" ph="SELECT * FRO... highscore" />
+                <marker date="1520928993029" expanded="true" signature="274:329" ph="INSERT INTO highscore... " />
+                <marker date="1520928993029" expanded="true" signature="274:340" ph="INSERT INTO highscore... " />
+                <marker date="1520928993029" expanded="true" signature="274:354" ph="INSERT INTO highscore... " />
+                <marker date="1520928993029" expanded="true" signature="274:355" ph="INSERT INTO highscore... " />
+                <marker date="1520928993029" expanded="true" signature="274:356" ph="INSERT INTO highscore... " />
+                <marker date="1520928993029" expanded="true" signature="274:367" ph="INSERT INTO highscore... " />
+                <marker date="1520928993029" expanded="true" signature="274:368" ph="INSERT INTO highscore... " />
+                <marker date="1520928993029" expanded="true" signature="510:533" ph="SELECT * FRO... highscore" />
               </folding>
             </state>
           </provider>
@@ -121,11 +119,11 @@
         <entry file="file://$PROJECT_DIR$/php/highscore.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="426">
-              <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding>
-                <marker date="1520864018853" expanded="false" signature="418:479" ph="..." />
-                <marker date="1520864018853" expanded="true" signature="480:614" ph="..." />
-                <marker date="1520864018853" expanded="true" signature="501:614" ph="..." />
+                <marker date="1520928993045" expanded="false" signature="418:479" ph="..." />
+                <marker date="1520928993045" expanded="true" signature="480:614" ph="..." />
+                <marker date="1520928993045" expanded="true" signature="501:614" ph="..." />
               </folding>
             </state>
           </provider>
@@ -348,12 +346,12 @@
       <workItem from="1520233413693" duration="2010000" />
       <workItem from="1520240796365" duration="1567000" />
       <workItem from="1520242714096" duration="78041000" />
-      <workItem from="1520840480577" duration="16016000" />
+      <workItem from="1520840480577" duration="16463000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241899000" />
+    <option name="totallyTimeSpent" value="242346000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -421,9 +419,9 @@
         <state relative-caret-position="374">
           <caret line="22" column="4" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
           <folding>
-            <marker date="1520864018853" expanded="false" signature="418:479" ph="..." />
-            <marker date="1520864018853" expanded="true" signature="480:614" ph="..." />
-            <marker date="1520864018853" expanded="true" signature="501:614" ph="..." />
+            <marker date="1520928993045" expanded="false" signature="418:479" ph="..." />
+            <marker date="1520928993045" expanded="true" signature="480:614" ph="..." />
+            <marker date="1520928993045" expanded="true" signature="501:614" ph="..." />
           </folding>
         </state>
       </provider>
@@ -658,15 +656,15 @@
         <state relative-caret-position="272">
           <caret line="21" column="22" lean-forward="false" selection-start-line="21" selection-start-column="22" selection-end-line="21" selection-end-column="22" />
           <folding>
-            <marker date="1520863614739" expanded="true" signature="417:454" ph="SELECT * FRO... gamestatus" />
-            <marker date="1520863614739" expanded="true" signature="903:991" ph="UPDATE games... " />
-            <marker date="1520863614739" expanded="true" signature="903:1016" ph="UPDATE games... " />
-            <marker date="1520863614739" expanded="true" signature="903:1040" ph="UPDATE games... " />
-            <marker date="1520863614739" expanded="true" signature="903:1061" ph="UPDATE games... " />
-            <marker date="1520863614739" expanded="true" signature="903:1107" ph="UPDATE games... " />
-            <marker date="1520863614739" expanded="true" signature="903:1111" ph="UPDATE games... " />
-            <marker date="1520863614739" expanded="true" signature="903:1137" ph="UPDATE games... " />
-            <marker date="1520863614739" expanded="true" signature="903:1191" ph="UPDATE games... " />
+            <marker date="1520928993025" expanded="true" signature="417:454" ph="SELECT * FRO... gamestatus" />
+            <marker date="1520928993025" expanded="true" signature="903:991" ph="UPDATE games... " />
+            <marker date="1520928993025" expanded="true" signature="903:1016" ph="UPDATE games... " />
+            <marker date="1520928993025" expanded="true" signature="903:1040" ph="UPDATE games... " />
+            <marker date="1520928993025" expanded="true" signature="903:1061" ph="UPDATE games... " />
+            <marker date="1520928993025" expanded="true" signature="903:1107" ph="UPDATE games... " />
+            <marker date="1520928993025" expanded="true" signature="903:1111" ph="UPDATE games... " />
+            <marker date="1520928993025" expanded="true" signature="903:1137" ph="UPDATE games... " />
+            <marker date="1520928993025" expanded="true" signature="903:1191" ph="UPDATE games... " />
           </folding>
         </state>
       </provider>
@@ -692,14 +690,14 @@
         <state relative-caret-position="561">
           <caret line="33" column="80" lean-forward="false" selection-start-line="33" selection-start-column="80" selection-end-line="33" selection-end-column="80" />
           <folding>
-            <marker date="1520864004390" expanded="true" signature="274:329" ph="INSERT INTO highscore... " />
-            <marker date="1520864004390" expanded="true" signature="274:340" ph="INSERT INTO highscore... " />
-            <marker date="1520864004390" expanded="true" signature="274:354" ph="INSERT INTO highscore... " />
-            <marker date="1520864004390" expanded="true" signature="274:355" ph="INSERT INTO highscore... " />
-            <marker date="1520864004390" expanded="true" signature="274:356" ph="INSERT INTO highscore... " />
-            <marker date="1520864004390" expanded="true" signature="274:367" ph="INSERT INTO highscore... " />
-            <marker date="1520864004390" expanded="true" signature="274:368" ph="INSERT INTO highscore... " />
-            <marker date="1520864004390" expanded="true" signature="510:533" ph="SELECT * FRO... highscore" />
+            <marker date="1520928993029" expanded="true" signature="274:329" ph="INSERT INTO highscore... " />
+            <marker date="1520928993029" expanded="true" signature="274:340" ph="INSERT INTO highscore... " />
+            <marker date="1520928993029" expanded="true" signature="274:354" ph="INSERT INTO highscore... " />
+            <marker date="1520928993029" expanded="true" signature="274:355" ph="INSERT INTO highscore... " />
+            <marker date="1520928993029" expanded="true" signature="274:356" ph="INSERT INTO highscore... " />
+            <marker date="1520928993029" expanded="true" signature="274:367" ph="INSERT INTO highscore... " />
+            <marker date="1520928993029" expanded="true" signature="274:368" ph="INSERT INTO highscore... " />
+            <marker date="1520928993029" expanded="true" signature="510:533" ph="SELECT * FRO... highscore" />
           </folding>
         </state>
       </provider>
@@ -707,11 +705,11 @@
     <entry file="file://$PROJECT_DIR$/php/highscore.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="426">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding>
-            <marker date="1520864018853" expanded="false" signature="418:479" ph="..." />
-            <marker date="1520864018853" expanded="true" signature="480:614" ph="..." />
-            <marker date="1520864018853" expanded="true" signature="501:614" ph="..." />
+            <marker date="1520928993045" expanded="false" signature="418:479" ph="..." />
+            <marker date="1520928993045" expanded="true" signature="480:614" ph="..." />
+            <marker date="1520928993045" expanded="true" signature="501:614" ph="..." />
           </folding>
         </state>
       </provider>
@@ -727,7 +725,7 @@
     <entry file="file://$PROJECT_DIR$/html/highscore.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -735,7 +733,7 @@
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1820">
-          <caret line="130" column="17" lean-forward="true" selection-start-line="130" selection-start-column="17" selection-end-line="130" selection-end-column="17" />
+          <caret line="130" column="17" lean-forward="false" selection-start-line="130" selection-start-column="17" selection-end-line="130" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -743,26 +741,26 @@
     <entry file="file://$PROJECT_DIR$/php/classes/orte.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
-          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding>
-            <marker date="1520863809968" expanded="true" signature="327:355" ph="SELECT * FRO... orte" />
-            <marker date="1520863809968" expanded="true" signature="664:727" ph="UPDATE orte " />
-            <marker date="1520863809968" expanded="true" signature="882:946" ph="UPDATE orte " />
-            <marker date="1520863809968" expanded="true" signature="1114:1215" ph="INSERT INTO orte... " />
-            <marker date="1520863809968" expanded="true" signature="1374:1414" ph="SELECT id FR... orte" />
-            <marker date="1520863809968" expanded="true" signature="1622:1675" ph="SELECT id FR... orte" />
-            <marker date="1520863809968" expanded="true" signature="1881:1897" ph="DELETE FROM " />
-            <marker date="1520863809968" expanded="true" signature="2062:2106" ph="SELECT * FRO... orte" />
+            <marker date="1520928993036" expanded="true" signature="327:355" ph="SELECT * FRO... orte" />
+            <marker date="1520928993036" expanded="true" signature="664:727" ph="UPDATE orte " />
+            <marker date="1520928993036" expanded="true" signature="882:946" ph="UPDATE orte " />
+            <marker date="1520928993036" expanded="true" signature="1114:1215" ph="INSERT INTO orte... " />
+            <marker date="1520928993036" expanded="true" signature="1374:1414" ph="SELECT id FR... orte" />
+            <marker date="1520928993036" expanded="true" signature="1622:1675" ph="SELECT id FR... orte" />
+            <marker date="1520928993036" expanded="true" signature="1881:1897" ph="DELETE FROM " />
+            <marker date="1520928993036" expanded="true" signature="2062:2106" ph="SELECT * FRO... orte" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php/generatemap.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="68" column="21" lean-forward="false" selection-start-line="68" selection-start-column="21" selection-end-line="68" selection-end-column="21" />
+        <state relative-caret-position="612">
+          <caret line="72" column="25" lean-forward="false" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
           <folding>
-            <marker date="1520927311265" expanded="true" signature="900:980" ph="/** * weißt " />
+            <marker date="1520928993038" expanded="true" signature="900:980" ph="/** * weißt " />
           </folding>
         </state>
       </provider>
