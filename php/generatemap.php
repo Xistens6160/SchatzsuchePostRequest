@@ -66,7 +66,7 @@ function nextRoom($x, $y)
 }
 
 /**
- * geht wenn die X-AChse voll ist ein hoch
+ * geht wenn die X-Achse voll ist ein hoch
  */
 function changex()
 {
