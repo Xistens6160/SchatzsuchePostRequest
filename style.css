@@ -1,3 +1,7 @@
+*{
+   font-family: "Arial";
+}
+
 .text {
     margin-top: 1%;
     font-size: large;
@@ -44,7 +48,7 @@ h1 {
     margin: auto;
 }
 
-#startbutton {
+.startbutton {
     text-align: center;
     margin-top: 25px;
     height: 100px;
@@ -72,7 +76,7 @@ h1 {
     margin-left: 300px;
 }
 
-#norden {
+.norden {
     position: absolute;
     top: 0px;
     right: 150px;
@@ -80,7 +84,7 @@ h1 {
     height: 50px;
 }
 
-#osten {
+.osten {
     position: absolute;
     top: 80px;
     right: 0px;
@@ -88,7 +92,7 @@ h1 {
     height: 50px;
 }
 
-#süden {
+.süden {
     position: absolute;
     bottom: 0px;
     right: 150px;
@@ -96,7 +100,7 @@ h1 {
     height: 50px;
 }
 
-#westen {
+.westen {
     position: absolute;
     left: 0px;
     top: 80px;
@@ -104,7 +108,7 @@ h1 {
     height: 50px;
 }
 
-#tipp {
+.tipp {
     position: absolute;
     top: 80px;
     width: 100px;
@@ -112,7 +116,7 @@ h1 {
     left: 150px;
 }
 
-#reset {
+.reset {
     right: 0px;
     position: absolute;
     width: 100px;
@@ -132,12 +136,13 @@ h1 {
     height: 50px;
 }
 
-#mainsitebutton {
+.mainsitebutton {
     margin-left: 420px;
     margin-top: 40px;
 }
 
-#getback {
+.getback {
     margin-left: 46%;
     margin-top: 40px;
 }
+

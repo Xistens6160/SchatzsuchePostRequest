@@ -24,7 +24,7 @@ $response = [];
  */
 function getButtonHtml($class, $var, $action)
 {
-    return "<button id='$class' onclick='callAction($action)'>" . $var . "</button>";
+    return "<button class='$class' onclick='callAction($action)'>" . $var . "</button>";
 }
 
 /**
@@ -34,7 +34,7 @@ function getButtonHtml($class, $var, $action)
 function getbackButton()
 {
 
-    return "<button id='getbackbutton' onclick=\"location.href = '../html/start.html';\">Zurück zur Startseite</button>";
+    return "<button class='btn btn-info getbackbutton' onclick=\"location.href = '../html/start.html';\">Zurück zur Startseite</button>";
 
 }
 
@@ -167,7 +167,7 @@ function callNextRoom($action)
 function callDirectionButton()
 {
     global $response;
-    $response['body'] = getButtonHtml("norden", 'Norden', 1) . getButtonHtml("osten", 'Osten', 2) . getButtonHtml("süden", 'Süden', 3) . getButtonHtml("westen", 'Westen', 4) . getButtonHtml("tipp", 'Tipp', 6) . getButtonHtml("reset", 'Reset', 0);
+    $response['body'] = getButtonHtml("btn btn-primary norden", 'Norden', 1) . getButtonHtml("btn btn-primary osten", 'Osten', 2) . getButtonHtml("btn btn-primary süden", 'Süden', 3) . getButtonHtml("btn btn-primary westen", 'Westen', 4) . getButtonHtml("btn btn-success tipp", 'Tipp', 6) . getButtonHtml("btn btn-danger reset", 'Reset', 0);
 }
 
 /**
@@ -232,7 +232,7 @@ if ($response["output"] == "Ziel") {
 
 // wenn die Antwort "Sackgasse" ist gibt er den Zurück Button aus
 if ($response["output"] == "Sackgasse") {
-    $response['body'] = getButtonHtml("sackgasse", 'Zurück', 5, $position);
+    $response['body'] = getButtonHtml("btn btn-primary norden", 'Zurück', 5, $position);
 }
 
 // speichert Daten
